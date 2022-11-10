@@ -36,6 +36,7 @@ export function MyCovidApp() {
   return (
     <>
       <h1>COVID CASES & DEATHS</h1>
+    
       <div>
         <AreaChart
           width={730}
@@ -58,14 +59,14 @@ export function MyCovidApp() {
           <Tooltip />
           <Area
             type="monotone"
-            dataKey="coviddata.TotalCases"
+            dataKey="TotalCases"
             stroke="#8884d8"
             fillOpacity={1}
             fill="url(#colorUv)"
           />
           <Area
             type="monotone"
-            dataKey="coviddata.TotalDeaths"
+            dataKey="TotalDeaths"
             stroke="#82ca9d"
             fillOpacity={1}
             fill="url(#colorPv)"
