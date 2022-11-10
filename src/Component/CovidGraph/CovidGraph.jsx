@@ -39,8 +39,8 @@ export function MyCovidApp() {
     
       <div>
         <AreaChart
-          width={730}
-          height={250}
+          width={830}
+          height={450}
           data={coviddata}
           margin={{ top: 10, right: 30, left: 0, bottom: 0 }}>
           <defs>
@@ -53,9 +53,9 @@ export function MyCovidApp() {
               <stop offset="95%" stopColor="#82ca9d" stopOpacity={0} />
             </linearGradient>
           </defs>
-          <XAxis dataKey="Deaths" />
+          <XAxis dataKey="Deaths" tickCount="1,2" />
           <YAxis />
-          <CartesianGrid strokeDasharray="3 3" />
+          <CartesianGrid strokeDasharray="[1,2,3,4,5]" />
           <Tooltip />
           <Area
             type="monotone"
