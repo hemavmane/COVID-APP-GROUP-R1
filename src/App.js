@@ -4,9 +4,12 @@ import DataTable from './Component/DataTable/DataTable'
 
 function App() {
   return (
+
     <>
       <DataTable />
     </>
+
+
 
   );
 }
