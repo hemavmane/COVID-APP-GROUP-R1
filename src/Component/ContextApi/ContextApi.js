@@ -1,11 +1,9 @@
 import React, { useState, useEffect, createContext } from "react";
 import axios from "axios";
+//  Providing Api data
+const createContextApi = createContext();
 
-              //  Providing Api data
-const createContextApi=createContext()
-
- function ContextApi({children}) {
-
+function ContextApi({ children }) {
   const [coviddata, setCovidData] = useState([]);
   useEffect(() => {
     axios
@@ -21,7 +19,6 @@ const createContextApi=createContext()
         }
       )
       .then(response => {
-        console.log(response.data);
         response.data = response.data.sort();
         setCovidData([...response.data]);
       })
@@ -30,12 +27,13 @@ const createContextApi=createContext()
       });
   }, []);
 
-  return <>
-  <createContextApi.Provider value={{coviddata}} >
-         {children}
-  </createContextApi.Provider>
-    
-  </>;
+  return (
+    <>
+      <createContextApi.Provider value={{ coviddata }}>
+        {children}
+      </createContextApi.Provider>
+    </>
+  );
 }
 
-export {createContextApi,ContextApi}
+export { createContextApi, ContextApi };
