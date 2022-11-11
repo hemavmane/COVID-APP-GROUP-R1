@@ -15,15 +15,16 @@ export function CovidGraph() {
   return (
     <>
       <h1>COVID CASES & DEATHS</h1>
-      <div style={{margin:"130px",padding:"10px",overflow:"visible"}}>
+      <div>
+        
         <AreaChart  
-          width={1000}
+          width={1200}
           height={560}
           data={coviddata}
           style={{overflow:"visible"}}
           margin={{ top: 10, right: 30, left: 0, bottom: 0}}>
           <XAxis dataKey="Country"  />
-          <YAxis allowDataOverflow={true}  dataKey="Population"  />
+          <YAxis width={90}   dataKey="Population"  />
           <CartesianGrid  />
           <Tooltip />
           <Area
