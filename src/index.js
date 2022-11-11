@@ -1,15 +1,15 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import './index.css';
-import App from './App';
 import reportWebVitals from './reportWebVitals';
-import { MyCovidApp } from './Component/CovidGraph/CovidGraph';
+import {ContextApi} from './Component/ContextApi/ContextApi'
+import { CovidGraph } from './Component/CovidGraph/CovidGraph';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    {/* <App /> */}
-    <MyCovidApp/>
+    <ContextApi>
+      <CovidGraph/>
+    </ContextApi>
   </React.StrictMode>
 );
 
