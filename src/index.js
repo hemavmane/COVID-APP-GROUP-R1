@@ -1,14 +1,18 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
-import App from './App';
+// import App from './App';
 import reportWebVitals from './reportWebVitals';
 import { MyCovidApp } from './Component/CovidGraph/CovidGraph';
+import Header from './Component/Header/Header'
+import Heading from './Component/Header/Heading';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
     {/* <App /> */}
+    <Header />
+    <Heading />
     <MyCovidApp/>
   </React.StrictMode>
 );
