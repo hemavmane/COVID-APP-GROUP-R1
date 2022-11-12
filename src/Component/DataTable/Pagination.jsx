@@ -1,4 +1,5 @@
 import React from "react";
+import '/Users/admin/CovidAppProject/COVID-APP-GROUP-R1/src/Component/DataTable/Pagination.css'
 
 const Pagination=({postsPerPage,totalPosts,paginate})=>{
     const pageNumbers=[];
@@ -12,11 +13,12 @@ return(
         <ul className="pagination">
             {pageNumbers.map(number=>(
                 <li key={number} className="page-item">
-                    <a onClick={()=>
+                    {/* <a onClick={()=>
                         paginate(number)
                         } href="#" className="page-link">
                         {number}
-                    </a>
+                    </a> */}
+
                 </li>
             ))}
         </ul>
