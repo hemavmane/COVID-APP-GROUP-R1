@@ -3,12 +3,14 @@ import ReactDOM from 'react-dom/client';
 import reportWebVitals from './reportWebVitals';
 import {ContextApi} from './Component/ContextApi/ContextApi'
 import { CovidGraph } from './Component/CovidGraph/CovidGraph';
+import  {CovidHotSpots}  from './Component/CovidHotspots/Hotspots';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
     <ContextApi>
       <CovidGraph/>
+      <CovidHotSpots/>
     </ContextApi>
   </React.StrictMode>
 );

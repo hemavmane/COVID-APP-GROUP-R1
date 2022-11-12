@@ -1,6 +1,9 @@
 import React from "react";
 import { useContext } from "react";
 import { createContextApi } from "../ContextApi/ContextApi";
+import "../CovidGraph/CovidGraph.css";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 import {
   AreaChart,
   XAxis,
@@ -12,7 +15,7 @@ import {
 } from "recharts";
 
 export function CovidGraph() {
-  const { coviddata } = useContext(createContextApi);
+  const { coviddata, error, showToast } = useContext(createContextApi);
 
   return (
     <>
@@ -43,6 +46,7 @@ export function CovidGraph() {
             fill="red"
           />
         </AreaChart>
+        {showToast && toast(error) && <ToastContainer theme="dark" />}
       </div>
     </>
   );

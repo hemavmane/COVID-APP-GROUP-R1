@@ -1,10 +1,13 @@
 import React, { useState, useEffect, createContext } from "react";
 import axios from "axios";
+
 //  Providing Api data
 const createContextApi = createContext();
 
 function ContextApi({ children }) {
   const [coviddata, setCovidData] = useState([]);
+  const [error, setError] = useState("");
+  const [showToast, setShowToast] = useState(false);
   useEffect(() => {
     axios
       .get(
@@ -19,17 +22,17 @@ function ContextApi({ children }) {
         }
       )
       .then(response => {
-        response.data = response.data.sort();
         setCovidData([...response.data]);
       })
       .catch(function (error) {
-        console.error(error);
+        setError("Something went wrong");
+        error && setShowToast(true);
       });
   }, []);
 
   return (
     <>
-      <createContextApi.Provider value={{ coviddata }}>
+      <createContextApi.Provider value={{ coviddata, error, showToast }}>
         {children}
       </createContextApi.Provider>
     </>
