@@ -1,14 +1,17 @@
-import React, {useState} from "react"
+import React from "react";
+import { useContext } from "react";
+import { createContextApi } from "../ContextApi/ContextApi";
 
-export function CovidHotSpots(){
 
- 
+export function CovidHotSpots() {
+  const { coviddata, setCovidData } = useContext(createContextApi);
 
-    return(
-        <>
-        <div id="world-map">
-            <h1>this is world map</h1>
-        </div>
-        </>
-    )
+  return (
+    <>
+      <div id="world-map">
+        <h1>This is world map</h1>
+      </div>
+    </>
+  );
 }
+
