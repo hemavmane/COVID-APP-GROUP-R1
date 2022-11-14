@@ -15,12 +15,16 @@ import {
 } from "recharts";
 
 export function CovidGraph() {
-  const { coviddata, error, showToast } = useContext(createContextApi);
+  const { coviddata,error, showToast } = useContext(createContextApi);
+  
+//  add onClick another graph
+
 
   return (
     <>
       <h1>COVID CASES & DEATHS</h1>
       <div>
+        
         <AreaChart
           width={1000}
           height={560}

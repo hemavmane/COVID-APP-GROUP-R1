@@ -32,7 +32,7 @@ function ContextApi({ children }) {
 
   return (
     <>
-      <createContextApi.Provider value={{ coviddata, error, showToast }}>
+      <createContextApi.Provider value={{ coviddata, error, showToast,setCovidData }}>
         {children}
       </createContextApi.Provider>
     </>
