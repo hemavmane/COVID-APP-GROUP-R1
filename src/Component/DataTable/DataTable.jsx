@@ -1,8 +1,10 @@
 import React, { useEffect, useState } from "react";
-import '/Users/admin/CovidAppProject/COVID-APP-GROUP-R1/src/Component/DataTable/DataTable.css'
-import Posts from "../DataTable/Posts";
-import DataTab from '/Users/admin/CovidAppProject/COVID-APP-GROUP-R1/src/Component/DataTable/DataTab.css'
 import axios from 'axios'
+import Posts from "../DataTable/Posts";
+
+import '/Users/admin/CovidAppProject/COVID-APP-GROUP-R1/src/Component/DataTable/DataTab.css'
+import '/Users/admin/CovidAppProject/COVID-APP-GROUP-R1/src/Component/DataTable/DataTable.css'
+
 
 function DataTable() {
     const [dataTab, setDataTab] = useState([])
