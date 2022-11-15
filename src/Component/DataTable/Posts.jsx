@@ -6,7 +6,6 @@ const Posts = ({ posts, loading }) => {
     if (loading) {
         return <h2>Loading.....</h2>
     }
-    // console.log(posts);
     return (
         <>
             <div className="Data-cont">
@@ -20,7 +19,6 @@ const Posts = ({ posts, loading }) => {
                             <th>Total cases</th>
                             <th>Total Deaths</th>
                             <th>Total Recovered</th>
-                            <th>Total Tests</th>
 
                         </tr>
                     </thead>
@@ -33,7 +31,6 @@ const Posts = ({ posts, loading }) => {
                                 <td>{post.TotCases_1M_Pop}</td>
                                 <td>{post.TotalCases}</td>
                                 <td>{post.TotalDeaths}</td>
-                                <td>{post.TotalRecovered}</td>
                                 <td>{post.TotalRecovered}</td>
                             </tr>
                         }

@@ -1,13 +1,18 @@
-import React, { useEffect, useState } from "react";
-import axios from 'axios'
+import React, {useState } from "react";
+import { useContext } from "react";
+import {createContextApi} from '/Users/admin/CovidAppProject/COVID-APP-GROUP-R1/src/Component/DataTable/CreateContext.jsx'
 import Posts from "../DataTable/Posts";
 
-import '/Users/admin/CovidAppProject/COVID-APP-GROUP-R1/src/Component/DataTable/DataTab.css'
-import '/Users/admin/CovidAppProject/COVID-APP-GROUP-R1/src/Component/DataTable/DataTable.css'
+
+import '../DataTable/DataTab.css'
+import '../DataTable/DataTable.css'
 
 
 function DataTable() {
-    const [dataTab, setDataTab] = useState([])
+    const { coviddata} = useContext(createContextApi);
+
+
+    // const [dataTab, setDataTab] = useState([])
     const [loading, setLoading] = useState(false)
     const [currentPage, setCurrentPage] = useState(1)
     const [itemsPerPage, setitemsPerPage] = useState(5);
@@ -23,7 +28,7 @@ function DataTable() {
     };
 
     const pages = [];
-    for (let i = 1; i <= Math.ceil(dataTab.length / itemsPerPage); i++) {
+    for (let i = 1; i <= Math.ceil(coviddata.length / itemsPerPage); i++) {
         pages.push(i);
     }
 
@@ -46,34 +51,9 @@ function DataTable() {
     });
 
 
-    useEffect(() => {
-        setLoading(true)
-        axios
-            .get(
-                'https://vaccovid-coronavirus-vaccine-and-treatment-tracker.p.rapidapi.com/api/npm-covid-data/',
-                {
-                    headers: {
-                        'X-RapidAPI-Key': '69b56f0544mshe1d9f75b422a4e7p142f81jsn40c4bc0c5681',
-                        'X-RapidAPI-Host': 'vaccovid-coronavirus-vaccine-and-treatment-tracker.p.rapidapi.com'
-                    },
-                }
-            )
-            .then(res => {
-                console.log(res.data);
-                setDataTab([...res.data]);
-                setLoading(false)
-            })
-            .catch(function (err) {
-                console.error(err);
-            });
-    }, []);
-
     const indexOfLastPost = currentPage * postsPerPage
     const indexOfFirstPost = indexOfLastPost - postsPerPage
-    const currentPosts = dataTab.slice(indexOfFirstPost, indexOfLastPost)
-
-    // changing pages
-    // const Paginate = pageNumber => setCurrentPage(pageNumber)
+    const currentPosts = coviddata.slice(indexOfFirstPost, indexOfLastPost)
 
     const handleNextBtn = () => {
         setCurrentPage(currentPage + 1)
@@ -126,6 +106,7 @@ function DataTable() {
                     </ul>
                 </div>
             </div>
+            
         </>
     )
 
