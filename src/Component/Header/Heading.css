@@ -2,12 +2,11 @@
     width: 90%;
     background-color: rgb(31, 31, 231);
     margin: 0 auto;
-    /* padding: 0.5px; */
-    /* margin-bottom: 1rem; */
 }
 
 h1{
     text-align: center;
+    padding: 10px;
     color: white;
     font-weight: 200;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;

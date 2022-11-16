@@ -6,6 +6,7 @@ import reportWebVitals from './reportWebVitals';
 import { MyCovidApp } from './Component/CovidGraph/CovidGraph';
 import Header from './Component/Header/Header'
 import Heading from './Component/Header/Heading';
+import Cart from './Component/Header/Cart'
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
@@ -13,6 +14,7 @@ root.render(
     {/* <App /> */}
     <Header />
     <Heading />
+    <Cart />
     <MyCovidApp/>
   </React.StrictMode>
 );
