@@ -1,0 +1,93 @@
+.box1{
+    width: 90%;
+    display: flex;
+    justify-content: space-between;
+    margin: 0 auto;
+    margin-bottom: 50px;
+    border-top: 1px solid orange;
+}
+
+.left1{
+    width: 50%;
+    font-size: 90%;
+    font-weight: 600;
+}
+
+.right1{
+    width: 40%;
+    text-align: center;
+    margin-top: 17px;
+}
+
+.sub{
+    width: 90%;
+    padding: 5px;
+    border-radius: 10px;
+    border: 1px solid orange;
+    background-color: white;
+    color: orange;
+    cursor: pointer;
+}
+
+.box2{
+    width: 90%;
+    padding: 5px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+}
+
+.logo{
+    width: 15%;
+}
+img{
+    width: 90%;
+}
+
+.links{
+    width: 75%;
+    font-size: 10px;
+}
+
+.links > a{
+    margin-right: 8px;
+}
+
+.icons > p{
+    font-size: 10px;
+}
+
+.box3{
+    width: 90%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 40px;
+    border-bottom: 5px solid green;
+}
+
+.box3 > .first{
+    width: 45%;
+    display: flex;
+    justify-content: space-between;
+    border: none;
+}
+
+.box3 > .second{
+    width: 50%;
+    display: flex;
+    justify-content: space-between;
+    border: none;
+}
+
+.box3 >.first >img{
+    width: 15%;
+}
+
+.box3 >.second >img{
+    width: 20%;
+}
+
+.box3 > .first >p {
+    font-size: 10px;
+}

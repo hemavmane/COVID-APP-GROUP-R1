@@ -1,7 +1,9 @@
-import React from 'react'
+import React, { useContext } from 'react'
 import './cart.css'
+import { createHeadarContextApi } from "../HeaderContextApi/HeaderContextApi";
 
 function Cart() {
+ const { headerData } = useContext(createHeadarContextApi);
   return (
     <>
       <div className="text">
@@ -11,28 +13,36 @@ function Cart() {
         <button className="btn1">GAVI COUNTRIES</button>
         <button className="btn2">GLOBAL</button>
       </div>
-      <div className="container">
-        <div className="first">
-          <span>
-            123456789
-            <p>Gavi countries with confirmed cases</p>
-          </span>
-        </div>
-        <div className="second">
-          <span>
-            <p>Confirmed Cases</p>
-            123456789
-            <p>817 new cases</p>
-          </span>
-        </div>
-        <div className="third">
-          <span>
-            <p>Confirmed Deaths</p>
-            123456789
-            <p>8 new deaths</p>
-          </span>
-        </div>
-      </div>
+          {headerData.map((i)=>{
+            return (
+              <div>
+                <div className="container">
+                  <div className="first">
+                    <span>
+                      <p>Gavi countries with confirmed cases:{i.ActiveCases}</p>
+                    </span>
+                  </div>
+
+                  <div className="second">
+                    <span>
+                      <p>Total Cases:{i.TotalCases}</p>
+                      <p>Recovered cases:{i.NewRecovered}</p>
+                    </span>
+                  </div>
+
+                  <div className="third">
+                    <span>
+                      <p>Total Deaths:{i.TotalDeaths}</p>
+                      <p>{i.NewDeaths} new deaths</p>
+                    </span>
+                  </div>
+                </div>
+              </div>
+            );
+          })}
+         
+        
+        
     </>
   );
 }

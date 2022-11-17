@@ -1,21 +1,24 @@
-import React from 'react';
-import ReactDOM from 'react-dom/client';
-import './index.css';
-// import App from './App';
-import reportWebVitals from './reportWebVitals';
-import { MyCovidApp } from './Component/CovidGraph/CovidGraph';
-import Header from './Component/Header/Header'
-import Heading from './Component/Header/Heading';
-import Cart from './Component/Header/Cart'
+import React from "react";
+import ReactDOM from "react-dom/client";
+import "./index.css";
+import reportWebVitals from "./reportWebVitals";
+import { MyCovidApp } from "./Component/CovidGraph/CovidGraph";
+import Header from "./Component/Header/Header";
+import Heading from "./Component/Header/Heading";
+import Cart from "./Component/Header/Cart";
+import { HeaderContextApiProvider } from "./Component/HeaderContextApi/HeaderContextApi";
+import Footer from "./Component/Footer/Footer";
 
-const root = ReactDOM.createRoot(document.getElementById('root'));
+const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <React.StrictMode>
-    {/* <App /> */}
-    <Header />
-    <Heading />
-    <Cart />
-    <MyCovidApp/>
+    <HeaderContextApiProvider>
+      <Header />
+      <Heading />
+      <Cart />
+      <MyCovidApp />
+      <Footer />
+    </HeaderContextApiProvider>
   </React.StrictMode>
 );
 
