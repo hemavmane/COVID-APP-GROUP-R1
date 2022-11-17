@@ -7,7 +7,6 @@ import Header from "./Component/Header/Header";
 import Heading from "./Component/Header/Heading";
 import Cart from "./Component/Header/Cart";
 import { HeaderContextApiProvider } from "./Component/HeaderContextApi/HeaderContextApi";
-import Footer from "./Component/Footer/Footer";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
@@ -17,7 +16,6 @@ root.render(
       <Heading />
       <Cart />
       <MyCovidApp />
-      <Footer />
     </HeaderContextApiProvider>
   </React.StrictMode>
 );
@@ -26,3 +24,7 @@ root.render(
 // to log results (for example: reportWebVitals(console.log))
 // or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
 reportWebVitals();
+
+
+
+
