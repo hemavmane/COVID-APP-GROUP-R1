@@ -1,13 +1,14 @@
 // import logo from './logo.svg';
 // import './App.css';
-import DataTable from './Component/DataTable/DataTable'
-// import Rough from '/Users/admin/CovidAppProject/COVID-APP-GROUP-R1/src/Component/DataTable/Rough.jsx'
+// import DataTable from './Component/DataTable/DataTable'
+import Registration from './Component/Registration/Registration'
 
 function App() {
   return (
 
     <>
-      <DataTable />
+      {/* <DataTable /> */}
+      <Registration/>
     </>
   );
 }
