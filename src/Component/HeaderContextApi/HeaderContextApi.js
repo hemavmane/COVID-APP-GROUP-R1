@@ -27,7 +27,6 @@ function HeaderContextApiProvider({children}){
       })
       .catch(function (error) {
         setError("something went wrong");
-        console.log('something went wrong')
         error&&setheaderToast(true)
       });
 },[])

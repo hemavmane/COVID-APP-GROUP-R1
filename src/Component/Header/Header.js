@@ -29,7 +29,7 @@ function Header() {
                     <a href="#">Governance &gt;</a>
                   </li>
                   <li>
-                    <a href="#">Market Shaping</a>{" "}
+                    <a href="#">Market Shaping</a>
                   </li>
                   <li>
                     <a href="#">Global Health & Development &gt;</a>
@@ -46,19 +46,19 @@ function Header() {
               <div className="sublinks2">
                 <ul>
                   <li>
-                    <a href="#">How our support works ></a>
+                    <a href="#">How our support works &gt;</a>
                   </li>
                   <li>
-                    <a href="#">Types of support ></a>
+                    <a href="#">Types of support &gt;</a>
                   </li>
                   <li>
-                    <a href="#">Country Hub ></a>
+                    <a href="#">Country Hub &gt;</a>
                   </li>
                   <li>
-                    <a href="#">Our Impact ></a>
+                    <a href="#">Our Impact &gt;</a>
                   </li>
                   <li>
-                    <a href="#">Programmatic Policies ></a>
+                    <a href="#">Programmatic Policies &gt;</a>
                   </li>
                 </ul>
               </div>
@@ -69,19 +69,19 @@ function Header() {
               <div className="sublinks3">
                 <ul>
                   <li>
-                    <a href="#">Resource mobilisation process ></a>
+                    <a href="#">Resource mobilisation process &gt;</a>
                   </li>
                   <li>
-                    <a href="#">Funding ></a>
+                    <a href="#">Funding &gt;</a>
                   </li>
                   <li>
                     <a href="#">Partnering with business</a>
                   </li>
                   <li>
-                    <a href="#">Innovative financing ></a>
+                    <a href="#">Innovative financing &gt;</a>
                   </li>
                   <li>
-                    <a href="#">INFUSE ></a>
+                    <a href="#">INFUSE &gt;</a>
                   </li>
                 </ul>
               </div>
@@ -116,13 +116,13 @@ function Header() {
               <div className="sublinks5">
                 <ul>
                   <li>
-                    <a href="#">Media room ></a>
+                    <a href="#">Media room &gt;</a>
                   </li>
                   <li>
                     <a href="#">Publications</a>
                   </li>
                   <li>
-                    <a href="#">Document library ></a>
+                    <a href="#">Document library &gt;</a>
                   </li>
                   <li>
                     <a href="#">Knowledge Produts</a>
