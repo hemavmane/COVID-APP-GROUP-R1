@@ -6,6 +6,8 @@ const createHeadarContextApi = createContext();
 
 function HeaderContextApiProvider({children}){
  const [headerData,setHeaderData] = useState([])
+ const [error,setError] = useState('')
+ const [headerToast,setheaderToast] = useState(false)
 
  useEffect(()=>{
     axios
@@ -24,7 +26,9 @@ function HeaderContextApiProvider({children}){
         setHeaderData([...response.data]);
       })
       .catch(function (error) {
-        console.error(error);
+        setError("something went wrong");
+        console.log('something went wrong')
+        error&&setheaderToast(true)
       });
 },[])
 
@@ -33,7 +37,7 @@ function HeaderContextApiProvider({children}){
    <>
      <div>
      
-    <createHeadarContextApi.Provider value={{headerData}}>
+    <createHeadarContextApi.Provider value={{headerData,error,headerToast}}>
         {children}
     </createHeadarContextApi.Provider>
      </div>

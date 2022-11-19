@@ -1,6 +1,8 @@
 import React from 'react'
-import './Header.css';
 import image from "./logo/Gavi-logo_1b.png";
+
+import './Header.css';
+
 function Header() {
   return (
     <>
@@ -18,25 +20,22 @@ function Header() {
                     <a href="#">About</a>
                   </li>
                   <li>
-                    <a href="#">Strategy ></a>
+                    <a href="#">Strategy &gt;</a>
                   </li>
                   <li>
-                    <a href="#">Operating model ></a>
+                    <a href="#">Operating model &gt;</a>
                   </li>
                   <li>
-                    <a href="#">Governance ></a>
+                    <a href="#">Governance &gt;</a>
                   </li>
                   <li>
-                    <a href="#">Market Shaping ></a>{" "}
+                    <a href="#">Market Shaping</a>{" "}
                   </li>
                   <li>
-                    <a href="#">Global Health & Development ></a>
+                    <a href="#">Global Health & Development &gt;</a>
                   </li>
                   <li>
-                    <a href="#">Global Health & Development ></a>
-                  </li>
-                  <li>
-                    <a href="#">Work with us ></a>
+                    <a href="#">Work with us &gt;</a>
                   </li>
                 </ul>
               </div>
@@ -112,15 +111,24 @@ function Header() {
               </div>
             </li>
 
-            <li><a href="#">NEWS & RESOURCES</a>
-            <div className="sublinks5">
-              <ul>
-                <li><a href="#">Media room ></a></li>
-                <li><a href="#">Publications</a></li>
-                <li><a href="#">Document library ></a></li>
-                <li><a href="#">Knowledge Produts</a></li>
-              </ul>
-            </div>
+            <li>
+              <a href="#">NEWS & RESOURCES</a>
+              <div className="sublinks5">
+                <ul>
+                  <li>
+                    <a href="#">Media room ></a>
+                  </li>
+                  <li>
+                    <a href="#">Publications</a>
+                  </li>
+                  <li>
+                    <a href="#">Document library ></a>
+                  </li>
+                  <li>
+                    <a href="#">Knowledge Produts</a>
+                  </li>
+                </ul>
+              </div>
             </li>
           </ul>
           <span></span>

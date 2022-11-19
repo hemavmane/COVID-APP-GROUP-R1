@@ -1,9 +1,12 @@
 import React, { useContext } from 'react'
-import './cart.css'
 import { createHeadarContextApi } from "../HeaderContextApi/HeaderContextApi";
 
+import "./cart.css";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
+
 function Cart() {
- const { headerData } = useContext(createHeadarContextApi);
+ const { headerData, error, headerToast } = useContext(createHeadarContextApi);
   return (
     <>
       <div className="text">
@@ -13,33 +16,50 @@ function Cart() {
         <button className="btn1">GAVI COUNTRIES</button>
         <button className="btn2">GLOBAL</button>
       </div>
-          {headerData.map((i)=>{
-            return (
-              <div>
-                <div className="container">
-                  <div className="first">
-                    <span>
-                      <p>Gavi countries with confirmed cases:{i.ActiveCases}</p>
-                    </span>
-                  </div>
-
-                  <div className="second">
-                    <span>
-                      <p>Total Cases:{i.TotalCases}</p>
-                      <p>Recovered cases:{i.NewRecovered}</p>
-                    </span>
-                  </div>
-
-                  <div className="third">
-                    <span>
-                      <p>Total Deaths:{i.TotalDeaths}</p>
-                      <p>{i.NewDeaths} new deaths</p>
-                    </span>
-                  </div>
-                </div>
+      {headerData.map((i) => {
+        return (
+          <div>
+            <div className="container">
+              <div className="first">
+                <span>
+                  <p>Total Cases: {i.ActiveCases}</p>
+                </span>
               </div>
-            );
-          })}
+
+              <div className="second">
+                <span>
+                  <p>Active Cases: {i.TotalCases}</p>
+                </span>
+              </div>
+
+              <div className="third">
+                <span>
+                  <p>Total Deaths: {i.TotalDeaths}</p>
+                </span>
+              </div>
+
+              <div className="fourth">
+                <span>
+                  <p>New Cases: {i.NewCases}</p>
+                </span>
+              </div>
+
+              <div className="five">
+                <span>
+                  <p>CRITICAL: {i.Serious_Critical}</p>
+                </span>
+              </div>
+
+              <div className="six">
+                <span>
+                  <p>New Deaths: {i.NewDeaths}</p>
+                </span>
+              </div>
+            </div>
+          </div>
+        );
+      })}
+      {headerToast && toast(error) && <ToastContainer/>}
     </>
   );
 }
