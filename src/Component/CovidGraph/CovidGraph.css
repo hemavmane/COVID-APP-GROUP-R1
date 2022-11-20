@@ -1,5 +1,10 @@
 
-
+.graph_container{
+    width: 80%;
+    position: absolute;
+    top: 2%;
+    right: 0%;
+}
 .heading_graph{
     text-align: center;
     color: white;

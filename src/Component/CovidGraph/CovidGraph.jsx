@@ -1,4 +1,6 @@
 import { useContext, useState } from "react";
+import { createContextApi } from "../ContextApiProvider1/ContextApiProvider1";
+
 import { ToastContainer, toast } from "react-toastify";
 import Button from "@mui/material/Button";
 import {
@@ -11,10 +13,8 @@ import {
   Legend,
 } from "recharts";
 
-import { createContextApi } from "../ContextApiProvider1/ContextApiProvider1";
-
-import "react-toastify/dist/ReactToastify.css";
 import "../CovidGraph/CovidGraph.css";
+import "react-toastify/dist/ReactToastify.css";
 
 export function CovidGraph() {
   const { coviddata, error, showToast } = useContext(createContextApi);
@@ -25,6 +25,7 @@ export function CovidGraph() {
 
   return (
     <>
+    <div className="graph_container">
       <h1 className="heading_graph">COVID CASES & DEATHS</h1>
       <Button
         className="daily_changes"
@@ -93,6 +94,7 @@ export function CovidGraph() {
 
         {showToast && toast(error) && <ToastContainer theme="dark" />}
       </div>
+    </div>
     </>
   );
 }

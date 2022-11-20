@@ -38,15 +38,15 @@ export function Phase1() {
         <table className="All_vaccine_sidebar1">
           <div className="vaccine_data_body">
             <tbody>
-              {phase1.map(i => {
+              {phase1.map(pha => {
                 return (
-                  <tr key={i.id} className="vaccine_details_container1">
+                  <tr key={pha.id} className="vaccine_details_container1">
                     <td className="developerResearcher_data1">
-                      {i.developerResearcher}
+                      {pha.developerResearcher}
                     </td>
-                    <td className="phase_data1">{i.phase}</td>
-                    <td className="category_data1">{i.category}</td>
-                    <td className="description_data1">{i.description}</td>
+                    <td className="phase_data1">{pha.phase}</td>
+                    <td className="category_data1">{pha.category}</td>
+                    <td className="description_data1">{pha.description}</td>
                   </tr>
                 );
               })}

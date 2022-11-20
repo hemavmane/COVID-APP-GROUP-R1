@@ -1,9 +1,9 @@
 import React, { useState, useEffect, createContext } from "react";
+
 import axios from "axios";
 
 //  Providing Api data
 const createContextApi = createContext();
-
 
 function ContextApiProvider1({ children }) {
   const [coviddata, setCovidData] = useState([]);
@@ -24,13 +24,11 @@ function ContextApiProvider1({ children }) {
         }
       )
       .then(response => {
-        console.log(response.data)
         setCovidData([...response.data]);
       })
       .catch(function (error) {
         setError("Something went wrong");
         error && setShowToast(true);
-         
       });
   }, []);
 
@@ -45,4 +43,3 @@ function ContextApiProvider1({ children }) {
 }
 
 export { createContextApi, ContextApiProvider1 };
-

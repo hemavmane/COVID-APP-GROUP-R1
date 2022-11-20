@@ -11,20 +11,21 @@ export function VaccineButtons(){
         <>
         <div className="vaccine_sidebar">
         <h1 className="h1_vaccine"> Categories</h1>
-           <div>
-           <Link to="/Vaccine" ><button  className="button_b">All Vaccine</button></Link> 
+        <div>
+           <Link to="/" ><button  className="button_b">All Vaccine</button></Link> 
            </div>
+          <div>
+           <Link to="/covidgraph"><button  className="button_b">Covid Dashboard</button></Link> 
+           </div>
+           
            <div>
            <Link to="/fda"><button  className="button_b">FDA Apprrove</button></Link>
            </div>
            <div>
-           <Link to="/phase"><button  className="button_b">Phase I</button></Link>
+           <Link to="/phase1"><button  className="button_b">Phase I</button></Link>
            </div>
            <div>
-           <Link to=""><button  className="button_b">Inactivated Virus</button></Link>
-           </div>
-           <div>
-           <Link to=""><button  className="button_b">Live Atenuated Virus</button></Link> 
+           <Link to="/news"><button  className="button_b">News</button></Link>
            </div>
            <div>
            <Link to=""><button  className="button_b">Replicating Viral vector</button></Link>

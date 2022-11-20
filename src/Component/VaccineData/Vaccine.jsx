@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+
 import axios from "axios";
 
 export function VaccineData() {
@@ -23,6 +24,7 @@ export function VaccineData() {
       });
   }, []);
 
+
   return (
     <>
       <div className="all1">
@@ -36,7 +38,7 @@ export function VaccineData() {
         <table className="All_vaccine_sidebar1">
           <div className="vaccine_data_body">
             <tbody>
-              {getdata.map(i => {
+              {getdata.map(i=> {
                 return (
                   <tr key={i.id} className="vaccine_details_container1">
                     <td className="developerResearcher_data1">

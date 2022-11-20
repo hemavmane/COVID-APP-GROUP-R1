@@ -27,6 +27,7 @@ table  td {
   background-color:#124559;
   padding: 1%;
   margin: 1%;
+  border-collapse: collapse;
 }
 
 .developerResearcher_data1{
@@ -53,7 +54,3 @@ table  td {
 
 
 
-
-/* .all_h11{
-
-} */
