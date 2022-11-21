@@ -1,8 +1,6 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
 
-
-
 export function Phase1() {
   const [phase1, setPhase1] = useState([]);
 
@@ -20,7 +18,6 @@ export function Phase1() {
         }
       )
       .then(res => {
-        console.log(res.data);
         setPhase1([...res.data]);
       });
   }, []);
@@ -38,18 +35,20 @@ export function Phase1() {
         <table className="All_vaccine_sidebar1">
           <div className="vaccine_data_body">
             <tbody>
-              {phase1.map(pha => {
-                return (
-                  <tr key={pha.id} className="vaccine_details_container1">
-                    <td className="developerResearcher_data1">
-                      {pha.developerResearcher}
-                    </td>
-                    <td className="phase_data1">{pha.phase}</td>
-                    <td className="category_data1">{pha.category}</td>
-                    <td className="description_data1">{pha.description}</td>
-                  </tr>
-                );
-              })}
+              {phase1.map(
+                ({ id, developerResearcher, phase, category, description }) => {
+                  return (
+                    <tr key={id} className="vaccine_details_container1">
+                      <td className="developerResearcher_data1">
+                        {developerResearcher}
+                      </td>
+                      <td className="phase_data1">{phase}</td>
+                      <td className="category_data1">{category}</td>
+                      <td className="description_data1">{description}</td>
+                    </tr>
+                  );
+                }
+              )}
             </tbody>
           </div>
         </table>

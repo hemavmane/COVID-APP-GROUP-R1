@@ -1,22 +1,23 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
 
-
 export function Fda() {
   const [fda, setFda] = useState([]);
 
   useEffect(() => {
     axios
-      .get( `https://vaccovid-coronavirus-vaccine-and-treatment-tracker.p.rapidapi.com/api/vaccines/get-fda-approved-vaccines`,
+      .get(
+        `https://vaccovid-coronavirus-vaccine-and-treatment-tracker.p.rapidapi.com/api/vaccines/get-fda-approved-vaccines`,
         {
-             headers: {
-            'X-RapidAPI-Key': '8c0c5645f4msh17b4e89de7b874ap10eb20jsn3e95f4dad049',
-            'X-RapidAPI-Host': 'vaccovid-coronavirus-vaccine-and-treatment-tracker.p.rapidapi.com'
+          headers: {
+            "X-RapidAPI-Key":
+              "8c0c5645f4msh17b4e89de7b874ap10eb20jsn3e95f4dad049",
+            "X-RapidAPI-Host":
+              "vaccovid-coronavirus-vaccine-and-treatment-tracker.p.rapidapi.com",
           },
         }
       )
       .then(res => {
-        console.log(res.data);
         setFda([...res.data]);
       });
   }, []);
@@ -34,16 +35,20 @@ export function Fda() {
         <table className="All_vaccine_sidebar1">
           <div className="vaccine_data_body">
             <tbody>
-              {fda.map(i => {
-                return (
-                  <tr key={i.id} className="vaccine_details_container1">
-                    <td className="developerResearcher_data1">{i.developerResearcher} </td>
-                    <td className="phase_data1">{i.phase}</td>
-                    <td className="category_data1">{i.category}</td>
-                    <td className="description_data1">{i.description}</td>
-                  </tr>
-                );
-              })}
+              {fda.map(
+                ({ id, developerResearcher, phase, category, description }) => {
+                  return (
+                    <tr key={id} className="vaccine_details_container1">
+                      <td className="developerResearcher_data1">
+                        {developerResearcher}{" "}
+                      </td>
+                      <td className="phase_data1">{phase}</td>
+                      <td className="category_data1">{category}</td>
+                      <td className="description_data1">{description}</td>
+                    </tr>
+                  );
+                }
+              )}
             </tbody>
           </div>
         </table>

@@ -19,11 +19,9 @@ export function VaccineData() {
         }
       )
       .then(res => {
-        console.log(res.data);
         setGetData([...res.data]);
       });
   }, []);
-
 
   return (
     <>
@@ -38,18 +36,20 @@ export function VaccineData() {
         <table className="All_vaccine_sidebar1">
           <div className="vaccine_data_body">
             <tbody>
-              {getdata.map(i=> {
-                return (
-                  <tr key={i.id} className="vaccine_details_container1">
-                    <td className="developerResearcher_data1">
-                      {i.developerResearcher}
-                    </td>
-                    <td className="phase_data1">{i.phase}</td>
-                    <td className="category_data1">{i.category}</td>
-                    <td className="description_data1">{i.description}</td>
-                  </tr>
-                );
-              })}
+              {getdata.map(
+                ({ id, developerResearcher, phase, category, description }) => {
+                  return (
+                    <tr key={id} className="vaccine_details_container1">
+                      <td className="developerResearcher_data1">
+                        {developerResearcher}
+                      </td>
+                      <td className="phase_data1">{phase}</td>
+                      <td className="category_data1">{category}</td>
+                      <td className="description_data1">{description}</td>
+                    </tr>
+                  );
+                }
+              )}
             </tbody>
           </div>
         </table>
