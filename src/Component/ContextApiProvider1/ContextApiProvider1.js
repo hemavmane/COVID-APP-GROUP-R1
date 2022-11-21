@@ -1,13 +1,15 @@
 import React, { useState, useEffect, createContext } from "react";
+
 import axios from "axios";
 
 //  Providing Api data
 const createContextApi = createContext();
 
-function ContextApi({ children }) {
+function ContextApiProvider1({ children }) {
   const [coviddata, setCovidData] = useState([]);
   const [error, setError] = useState("");
   const [showToast, setShowToast] = useState(false);
+
   useEffect(() => {
     axios
       .get(
@@ -32,11 +34,12 @@ function ContextApi({ children }) {
 
   return (
     <>
-      <createContextApi.Provider value={{ coviddata, error, showToast }}>
+      <createContextApi.Provider
+        value={{ coviddata, error, showToast, setCovidData }}>
         {children}
       </createContextApi.Provider>
     </>
   );
 }
 
-export { createContextApi, ContextApi };
+export { createContextApi, ContextApiProvider1 };
