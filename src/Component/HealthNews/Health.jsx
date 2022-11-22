@@ -11,7 +11,7 @@ function HealthApi({ children }) {
   useEffect(() => {
       const options = {
         method: 'GET',
-        url: 'https://vaccovid-coronavirus-vaccine-and-treatment-tracker.p.rapidapi.com/api/npm-covid-data/',
+        url: 'https://disease.sh/v3/covid-19/all',
         headers: {
           'X-RapidAPI-Key': '69b56f0544mshe1d9f75b422a4e7p142f81jsn40c4bc0c5681',
           'X-RapidAPI-Host': 'vaccovid-coronavirus-vaccine-and-treatment-tracker.p.rapidapi.com'
@@ -21,20 +21,8 @@ function HealthApi({ children }) {
           console.log(response.data);
       })
   }, []);
-//   return (
-//     <>
-//       <createContextApi.Provider value={{ covidhealth}}>
-//         {children}
-//       </createContextApi.Provider>
-//     </>
-//   );
 
-  return (
-    <div>
-      {/* <h1>{post.title}</h1>
-      <p>{post.body}</p> */}
-    </div>
-  );
+
 }
 
 export {HealthApi, createHealthApi}
