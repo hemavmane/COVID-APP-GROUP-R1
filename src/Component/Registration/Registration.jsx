@@ -13,7 +13,6 @@ const Registration = () => {
     const handleInput = (e) => {
         const Name = e.target.name;
         const val = e.target.value;
-        // console.log(Name,val);
         setuserReg({ ...userReg, [Name]: val })
 
     }
