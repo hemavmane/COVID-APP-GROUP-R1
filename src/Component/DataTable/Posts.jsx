@@ -1,6 +1,6 @@
 
 import React from "react";
-import '/Users/admin/CovidAppProject/COVID-APP-GROUP-R1/src/Component/DataTable/Posts.css'
+import '../DataTable/Posts.css'
 
 const Posts = ({ posts, loading }) => {
     if (loading) {

@@ -1,4 +1,4 @@
-import React, {useState } from "react";
+import React, { useEffect, useState } from "react";
 import { useContext } from "react";
 import {createContextApi} from '/Users/admin/CovidAppProject/COVID-APP-GROUP-R1/src/Component/DataTable/CreateContext.jsx'
 import Posts from "../DataTable/Posts";
@@ -19,6 +19,8 @@ function DataTable() {
     const [pageNumberLimit, setpageNumberLimit] = useState(5);
     const [maxPageNumberLimit, setmaxPageNumberLimit] = useState(5);
     const [minPageNumberLimit, setminPageNumberLimit] = useState(0);
+    const [enable, setEnable]=useState(false)
+    const [secEnable, setsecEnable]=useState(false)
     const [postsPerPage] = useState(20)
 
 
@@ -61,6 +63,11 @@ function DataTable() {
             setmaxPageNumberLimit(maxPageNumberLimit + pageNumberLimit)
             setminPageNumberLimit(minPageNumberLimit + pageNumberLimit)
         }
+        if(currentPage == pages[pages.length - 1]){
+            setsecEnable(true)
+        }else{
+            setsecEnable(false)
+        }
     }
 
     const handlePrevBtn = () => {
@@ -69,6 +76,12 @@ function DataTable() {
         if ((currentPage - 1) % pageNumberLimit == 0) {
             setmaxPageNumberLimit(maxPageNumberLimit - pageNumberLimit)
             setminPageNumberLimit(minPageNumberLimit - pageNumberLimit)
+
+        }
+        if(currentPage == pages[0]){
+            setEnable(true)
+        }else{
+            setEnable(false)
         }
     }
 
@@ -83,6 +96,7 @@ function DataTable() {
         pageDecrementBtn = <li onClick={handlePrevBtn}> &hellip; </li>;
     }
 
+
     return (
         <>
 
@@ -94,14 +108,16 @@ function DataTable() {
                 <div className="dataCont">
                     <ul className="Pagenumbers">
                         <li>
-                            <button className="btn" onClick={handlePrevBtn} disabled={currentPage == pages[0] ? true : false}>Prev</button>
+                            {/* <button className="btn" onClick={handlePrevBtn} disabled={currentPage == pages[0] ? true : false}>Prev</button> */}
+                            <button className="btn" onClick={handlePrevBtn} disabled={enable}>Prev</button>
                         </li>
                         {pageDecrementBtn}
                         {renderPageNumbers}
                         {pageIncrementBtn}
 
                         <li>
-                            <button className="btn" onClick={handleNextBtn} disabled={currentPage == pages[pages.length - 1] ? true : false}>Next</button>
+                            {/* <button className="btn" onClick={handleNextBtn} disabled={currentPage == pages[pages.length - 1] ? true : false}>Next</button> */}
+                            <button className="btn" onClick={handleNextBtn} disabled={secEnable}>Next</button>
                         </li>
                     </ul>
                 </div>
