@@ -1,0 +1,19 @@
+.news_img{
+    width:60%;
+    height: 50%;
+    margin-left: 30%;
+}
+
+.all_news{
+    display: flex;
+    align-items: center;
+    align-content: center;
+    flex-direction: column;
+    color: white;
+    position: absolute;
+    top: 2%;
+    right: 0%;
+    height: 60vh;
+    width: 50%;
+    overflow-y: scroll;
+  }

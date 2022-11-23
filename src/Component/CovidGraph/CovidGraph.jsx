@@ -1,5 +1,8 @@
-import React, { useState, useEffect } from "react";
-import axios from "axios";
+import { useContext, useState } from "react";
+import { createContextApi } from "../ContextApiProvider1/ContextApiProvider1";
+
+import { ToastContainer, toast } from "react-toastify";
+import Button from "@mui/material/Button";
 import {
   AreaChart,
   XAxis,
@@ -7,72 +10,91 @@ import {
   CartesianGrid,
   Tooltip,
   Area,
+  Legend,
 } from "recharts";
-export function MyCovidApp() {
-  const [coviddata, setCovidData] = useState([]);
 
-  useEffect(() => {
-    axios
-      .get(
-        `https://vaccovid-coronavirus-vaccine-and-treatment-tracker.p.rapidapi.com/api/npm-covid-data/`,
-        {
-          headers: {
-            "X-RapidAPI-Key":
-              "8c0c5645f4msh17b4e89de7b874ap10eb20jsn3e95f4dad049",
-            "X-RapidAPI-Host":
-              "vaccovid-coronavirus-vaccine-and-treatment-tracker.p.rapidapi.com",
-          },
-        }
-      )
-      .then(response => {
-        console.log(response.data);
-        setCovidData([...response.data]);
-      })
-      .catch(function (error) {
-        console.error(error);
-      });
-  }, []);
+import "../CovidGraph/CovidGraph.css";
+import "react-toastify/dist/ReactToastify.css";
+
+export function CovidGraph() {
+  const { coviddata, error, showToast } = useContext(createContextApi);
+  const [iscurrent, setISCurrent] = useState(false);
+  const handleCurrentData = () => {
+    setISCurrent(!iscurrent);
+  };
 
   return (
     <>
-      <h1>COVID CASES & DEATHS</h1>
-    
-      <div>
-        <AreaChart
-          width={830}
-          height={450}
-          data={coviddata}
-          margin={{ top: 10, right: 30, left: 0, bottom: 0 }}>
-          <defs>
-            <linearGradient id="colorUv" x1="0" y1="0" x2="0" y2="1">
-              <stop offset="5%" stopColor="#8884d8" stopOpacity={0.8} />
-              <stop offset="95%" stopColor="#8884d8" stopOpacity={0} />
-            </linearGradient>
-            <linearGradient id="colorPv" x1="0" y1="0" x2="0" y2="1">
-              <stop offset="5%" stopColor="#82ca9d" stopOpacity={0.8} />
-              <stop offset="95%" stopColor="#82ca9d" stopOpacity={0} />
-            </linearGradient>
-          </defs>
-          <XAxis dataKey="Deaths" tickCount="1,2" />
-          <YAxis />
-          <CartesianGrid strokeDasharray="[1,2,3,4,5]" />
-          <Tooltip />
-          <Area
-            type="monotone"
-            dataKey="TotalCases"
-            stroke="#8884d8"
-            fillOpacity={1}
-            fill="url(#colorUv)"
-          />
-          <Area
-            type="monotone"
-            dataKey="TotalDeaths"
-            stroke="#82ca9d"
-            fillOpacity={1}
-            fill="url(#colorPv)"
-          />
-        </AreaChart>
+    <div className="graph_container">
+      <h1 className="heading_graph">COVID CASES & DEATHS</h1>
+      <Button
+        className="daily_changes"
+        variant="contained"
+        onClick={handleCurrentData}>
+        Daily Changes
+      </Button>
+      <div className="Areachart">
+        {iscurrent ? (
+          <div className="Areachart_1">
+            <AreaChart
+              width={1000}
+              height={560}
+              data={coviddata}
+              margin={{ top: 10, right: 30, left: 0, bottom: 0 }}>
+              <XAxis dataKey="Country" />
+              <YAxis width={90} allowDataOverflow="true" dataKey="Population" />
+              <CartesianGrid />
+              <Tooltip />
+              <Legend />
+              <Area
+                type="monotone"
+                dataKey="ActiveCases"
+                stroke="#8884d8"
+                fillOpacity={0.8}
+                fill="#e1e5f2"
+              />
+              <Area
+                type="monotone"
+                dataKey="TotalTests"
+                stroke="#82ca9d"
+                fillOpacity={0.3}
+                fill="#bfdbf7"
+              />
+            </AreaChart>
+          </div>
+        ) : (
+          <div className="Areachart_2">
+            <AreaChart
+              width={1000}
+              height={560}
+              data={coviddata}
+              margin={{ top: 10, right: 30, left: 0, bottom: 0 }}>
+              <XAxis allowDataOverflow="true" dataKey="Country" />
+              <YAxis width={90} allowDataOverflow="true" dataKey="Population" />
+              <CartesianGrid />
+              <Tooltip />
+              <Legend />
+              <Area
+                type="monotone"
+                dataKey="TotalCases"
+                stroke="#8884d8"
+                fillOpacity={0.6}
+                fill="#1f7a8c"
+              />
+              <Area
+                type="monotone"
+                dataKey="TotalDeaths"
+                stroke="#82ca9d"
+                fillOpacity={0.6}
+                fill="#bfdbf7"
+              />
+            </AreaChart>
+          </div>
+        )}
+
+        {showToast && toast(error) && <ToastContainer theme="dark" />}
       </div>
+    </div>
     </>
   );
 }
