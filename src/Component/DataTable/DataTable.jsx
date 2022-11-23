@@ -1,6 +1,8 @@
+import {createContextApi} from '/Users/admin/CovidAppProject/COVID-APP-GROUP-R1/src/Component/DataTable/CreateContext.jsx'
+
 import React, { useEffect, useState } from "react";
 import { useContext } from "react";
-import {createContextApi} from '/Users/admin/CovidAppProject/COVID-APP-GROUP-R1/src/Component/DataTable/CreateContext.jsx'
+
 import Posts from "../DataTable/Posts";
 
 
