@@ -23,15 +23,17 @@ const Posts = ({ posts, loading }) => {
                         </tr>
                     </thead>
                     <tbody>
-                        {posts.map(post => {
+                        {posts.map((
+                            {Country,Population,ActiveCases,TotCases_1M_Pop,TotalCases,TotalDeaths,TotalRecovered}
+                        ) => {
                             return <tr>
-                                <td>{post.Country}</td>
-                                <td>{post.Population}</td>
-                                <td>{post.ActiveCases}</td>
-                                <td>{post.TotCases_1M_Pop}</td>
-                                <td>{post.TotalCases}</td>
-                                <td>{post.TotalDeaths}</td>
-                                <td>{post.TotalRecovered}</td>
+                                <td>{Country}</td>
+                                <td>{Population}</td>
+                                <td>{ActiveCases}</td>
+                                <td>{TotCases_1M_Pop}</td>
+                                <td>{TotalCases}</td>
+                                <td>{TotalDeaths}</td>
+                                <td>{TotalRecovered}</td>
                             </tr>
                         }
                         )}
