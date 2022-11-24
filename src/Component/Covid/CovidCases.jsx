@@ -9,23 +9,15 @@ import {
   Tooltip,
   Legend,
   LabelList,
-  
 } from "recharts";
-
-
-
 
 const CustomizedLabel = ({ x, y, stroke, value }) => {
   return (
     <text x={x} y={y} dy={-4} fill={stroke} fontSize={10} textAnchor="middle">
-      {value} 
+      {value}
     </text>
-    
   );
 };
-
-
-
 
 const CustomizedAxisTick = ({ x, y, payload }) => {
   return (
@@ -36,44 +28,34 @@ const CustomizedAxisTick = ({ x, y, payload }) => {
         dy={16}
         textAnchor="end"
         fill="#666"
-        transform="rotate(-35)"
-      >
+        transform="rotate(-35)">
         {payload.value}
       </text>
     </g>
   );
 };
 
-export function MainChart() {
+export function CovidCasesData() {
   const [obj, setObj] = useState([
     {
-      
       country: "",
       activePerOneMillion: "",
       casesPerOneMillion: "",
-      recovered:"",
-      // img:"hema",
+      recovered: "",
     },
   ]);
-  
+
   useEffect(() => {
-    const MainChartData = async () => {
-      await axios
-        .get(
-          "https://disease.sh/v3/covid-19/countries"
-        )
-        .then((res) => {
-         setObj(res.data)
-        });
+    const CovidCasesData = async () => {
+      await axios.get("https://disease.sh/v3/covid-19/countries").then(res => {
+        setObj(res.data);
+      });
     };
-    MainChartData();
+    CovidCasesData();
   }, []);
 
- 
   return (
     <>
-    
-  
       <div className="main_chart_container">
         <LineChart
           width={750}
@@ -82,18 +64,17 @@ export function MainChart() {
           margin={{
             top: 20,
             bottom: 10,
-          }}
-        >
+          }}>
           <CartesianGrid strokeDasharray="3 3" />
-          <XAxis dataKey="country"  height={60} tick={<CustomizedAxisTick />} />
+          <XAxis dataKey="country" height={60} tick={<CustomizedAxisTick />} />
           <YAxis />
           <Tooltip />
           <Legend />
           <Line type="monotone" dataKey="activePerOneMillion" stroke="#0000FF">
-          <LabelList content={<CustomizedLabel />} />
+            <LabelList content={<CustomizedLabel />} />
           </Line>
           <Line type="monotone" dataKey="casesPerOneMillion" stroke="#82CA9D" />
-          <Line type="monotone" dataKey="recovered" stroke="#FF0000" /> 
+          <Line type="monotone" dataKey="recovered" stroke="#FF0000" />
         </LineChart>
       </div>
     </>

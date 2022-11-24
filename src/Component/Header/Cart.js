@@ -13,7 +13,7 @@ function Cart() {
         <p>Data source: Gavi/World Health Organization.</p>
       </div>
       <div className="btn">
-        <button className="btn1">GAVI COUNTRIES</button>
+        <button className="btn1">DashBoard</button>
         <button className="btn2">GLOBAL</button>
       </div>
       {headerData.map(

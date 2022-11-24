@@ -20,7 +20,8 @@ function Header() {
                     <a href="#">About</a>
                   </li>
                   <li>
-                    <a href="#">Strategy &gt;</a>
+                    <a href="#">
+                      Strategy &gt;</a>
                   </li>
                   <li>
                     <a href="#">Operating model &gt;</a>

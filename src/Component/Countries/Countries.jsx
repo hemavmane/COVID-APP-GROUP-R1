@@ -33,7 +33,8 @@ export const Countries =()=>{
 
   return (
     <>
-    <div className="graph_container1">
+    <button></button>
+    <div className="graph_container">
           <AreaChart
               width={1000}
               height={560}

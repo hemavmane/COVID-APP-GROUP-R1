@@ -19,15 +19,15 @@ import { ContextApiProvider1 } from "./Component/ContextApiProvider1/ContextApiP
 
 import "./App.css";
 import "./Component/VaccineData/Vaccine.css";
-import { Countries } from "./Component/Map/Map";
-import { MainChart } from "./Component/Co/C";
+import './Component/CovidGraph/CovidGraph.css'
+import { Countries } from "./Component/Countries/Countries";
+import { CovidCasesData } from "./Component/Covid/CovidCases";
 
 
 function App() {
   const { coviddata } = useContext(createContextApi);
     console.log(coviddata)
-  const  coviddata  = useContext(createContextApi);
-console.log(coviddata)
+
 
   useEffect(() => {
     setTimeout(() => {
@@ -53,6 +53,11 @@ console.log(coviddata)
   return (
     <>
       <div>
+        <HeaderContextApiProvider>
+        <Header/>
+        <Heading/>
+        <Cart/>
+        </HeaderContextApiProvider>
         {coviddata.length > 0 ? (
           <div className="app_background">
             <VaccineButtons />
@@ -62,6 +67,9 @@ console.log(coviddata)
               <Route path="/fda" element={<Fda />} />
               <Route path="/phase1" element={<Phase1 />} />
               <Route path="/news" element={<News/>} />
+              <Route path='/countries' element={<Countries/>}/>
+              <Route path='/countries' element={ <CovidCasesData/>}/>
+             
             </Routes>
            
           </div>

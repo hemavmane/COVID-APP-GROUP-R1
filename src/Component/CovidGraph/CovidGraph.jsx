@@ -32,12 +32,14 @@ export function CovidGraph() {
     <>
     <div className="graph_container">
       <h1 className="heading_graph">COVID CASES & DEATHS</h1>
+      <div className="daily_changes">
       <Button
-        className="daily_changes"
+        
         variant="contained"
         onClick={handleCurrentData}>
         Daily Changes
       </Button>
+      </div>
       <div className="Areachart">
         {iscurrent ? (
           <div className="Areachart_1">
