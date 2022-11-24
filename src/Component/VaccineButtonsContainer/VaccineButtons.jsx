@@ -34,12 +34,7 @@ export function VaccineButtons(){
            <Link to="/covidCasesData"><button  className="button_b">CovidCases</button></Link>        
           </div> 
           
-          <div>
-          <Link to=""><button  className="button_b">Replicating bacterial vector</button></Link>
-          </div>
-          <div>
-          <Link to=""><button  className="button_b">Virus Like Particales</button></Link>
-          </div>
+        
         </div>
         </>
     )
