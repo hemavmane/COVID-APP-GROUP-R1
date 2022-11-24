@@ -28,10 +28,10 @@ export function VaccineButtons(){
            <Link to="/news"><button  className="button_b">News</button></Link>
            </div>
            <div>
-           <Link to=""><button  className="button_b">Replicating Viral vector</button></Link>
+           <Link to="/countries"><button  className="button_b">Countries</button></Link>
            </div>
            <div>
-           <Link to=""><button  className="button_b">Non-Replicating Viral vector</button></Link>        
+           <Link to="/mainChart"><button  className="button_b">Co</button></Link>        
           </div> 
           <div><Link to=""><button  className="button_b">Protien subunit</button></Link>
           </div>

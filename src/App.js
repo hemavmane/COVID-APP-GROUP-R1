@@ -13,17 +13,19 @@ import { News } from "./Component/NewsCovid/News";
 
 import "./App.css";
 import "./Component/VaccineData/Vaccine.css";
+import { Countries } from "./Component/Map/Map";
+import { MainChart } from "./Component/Co/C";
 
 
 function App() {
   const { coviddata } = useContext(createContextApi);
-
+    console.log(coviddata)
   useEffect(() => {
     setTimeout(() => {
       dna();
     }, 2000);
     coviddata.push(1);
-  }, []);
+  },[]);
 
   const dna = () => {
     return (
@@ -51,8 +53,10 @@ function App() {
               <Route path="/fda" element={<Fda />} />
               <Route path="/phase1" element={<Phase1 />} />
               <Route path="/news" element={<News/>} />
+              <Route path="/countries" element={ <Countries/>} />
+              <Route path="/mainchart" element={ <MainChart/>} />
             </Routes>
-           
+            
           </div>
         ) : (
           <div className="dna">

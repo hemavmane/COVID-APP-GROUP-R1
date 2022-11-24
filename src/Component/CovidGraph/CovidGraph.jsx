@@ -11,6 +11,11 @@ import {
   Tooltip,
   Area,
   Legend,
+  Customized,
+  LabelList,
+  CustomizedAxisTick,LineChart,
+  Line,
+  
 } from "recharts";
 
 import "../CovidGraph/CovidGraph.css";
@@ -36,12 +41,13 @@ export function CovidGraph() {
       <div className="Areachart">
         {iscurrent ? (
           <div className="Areachart_1">
+
             <AreaChart
               width={1000}
               height={560}
               data={coviddata}
               margin={{ top: 10, right: 30, left: 0, bottom: 0 }}>
-              <XAxis dataKey="Country" />
+              <XAxis dataKey="Country"  />
               <YAxis width={90} allowDataOverflow="true" dataKey="Population" />
               <CartesianGrid />
               <Tooltip />
@@ -53,6 +59,7 @@ export function CovidGraph() {
                 fillOpacity={0.8}
                 fill="#e1e5f2"
               />
+             
               <Area
                 type="monotone"
                 dataKey="TotalTests"

@@ -4,6 +4,10 @@
     height: 80vh;
     overflow-y: scroll;
     background-color:#01161e ;
+    position: fixed;
+    top: 2%;
+    left: 0%;
+    z-index: 1;
 }
 .h1_vaccine{
     color: white
@@ -25,6 +29,7 @@ margin: 2%;
     font-weight:normal;
     border-radius: 3%;
     cursor: pointer;
+   
 }
 
 
