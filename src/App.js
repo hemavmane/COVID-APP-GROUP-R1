@@ -1,4 +1,4 @@
-import { Dna } from "react-loader-spinner";
+import {Dna} from 'react-loader-spinner'
 import { Routes, Route } from "react-router-dom";
 
 import { createContextApi } from "./Component/ContextApiProvider1/ContextApiProvider1";
@@ -10,6 +10,12 @@ import { VaccineButtons } from "./Component/VaccineButtonsContainer/VaccineButto
 import { Fda } from "./Component/FdaApprrove/Fda";
 import { Phase1 } from "./Component/Phase1/Phase";
 import { News } from "./Component/NewsCovid/News";
+import { HeaderContextApiProvider } from "./Component/HeaderContextApi/HeaderContextApi";
+import Header from "./Component/Header/Header";
+import Heading from "./Component/Header/Heading";
+import Cart from "./Component/Header/Cart";
+import { ContextApiProvider1 } from "./Component/ContextApiProvider1/ContextApiProvider1";
+
 
 import "./App.css";
 import "./Component/VaccineData/Vaccine.css";
@@ -20,12 +26,15 @@ import { MainChart } from "./Component/Co/C";
 function App() {
   const { coviddata } = useContext(createContextApi);
     console.log(coviddata)
+  const  coviddata  = useContext(createContextApi);
+console.log(coviddata)
+
   useEffect(() => {
     setTimeout(() => {
       dna();
     }, 2000);
     coviddata.push(1);
-  },[]);
+  }, []);
 
   const dna = () => {
     return (
@@ -53,16 +62,11 @@ function App() {
               <Route path="/fda" element={<Fda />} />
               <Route path="/phase1" element={<Phase1 />} />
               <Route path="/news" element={<News/>} />
-              <Route path="/countries" element={ <Countries/>} />
-              <Route path="/mainchart" element={ <MainChart/>} />
             </Routes>
-            
+           
           </div>
         ) : (
-          <div className="dna">
-            {dna()}
-          </div>
-          
+          <div className="dna">{dna()}</div>
         )}
       </div>
     </>
