@@ -1,5 +1,6 @@
 import React from 'react'
 import image from "./logo/Gavi-logo_1b.png";
+import {Link} from 'react-router-dom'
 
 import './Header.css';
 
@@ -20,7 +21,8 @@ function Header() {
                     <a href="#">About</a>
                   </li>
                   <li>
-                    <a href="#">Strategy &gt;</a>
+                <Link>Dashboard&gt;
+                </Link>
                   </li>
                   <li>
                     <a href="#">Operating model &gt;</a>
