@@ -11,19 +11,19 @@ import reportWebVitals from "./reportWebVitals";
 
 // import reportWebVitals from "./reportWebVitals";
 // import { BrowserRouter } from "react-router-dom";
-// import { HeaderContextApiProvider } from "./Component/HeaderContextApi/HeaderContextApi";
-// import { ContextApiProvider1 } from "./Component/ContextApiProvider1/ContextApiProvider1";
+import { HeaderContextApiProvider } from "./Component/HeaderContextApi/HeaderContextApi";
+import { ContextApiProvider1 } from "./Component/ContextApiProvider1/ContextApiProvider1";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <React.StrictMode>
     <BrowserRouter>
-      {/* <HeaderContextApiProvider> */}
-        {/* <ContextApiProvider1> */}
+      <HeaderContextApiProvider>
+        <ContextApiProvider1>
           {/* <App /> */}
          <App/>
-        {/* </ContextApiProvider1> */}
-      {/* </HeaderContextApiProvider> */}
+        </ContextApiProvider1>
+      </HeaderContextApiProvider>
     </BrowserRouter>
   </React.StrictMode>
 );

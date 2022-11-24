@@ -2,6 +2,7 @@ import React, { useContext } from 'react'
 import { createHeadarContextApi } from "../HeaderContextApi/HeaderContextApi";
 
 import "./cart.css";
+
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 
