@@ -1,0 +1,122 @@
+.navbar{
+    width: 90%;
+    height: auto;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+}
+
+.left{
+    width: 20%;
+    padding: 2px;
+}
+.left > img{
+    width: 85%;
+}
+.right{
+    width: 100%;
+}
+
+.list{
+    display: flex;
+    justify-content: space-between;
+}
+
+li{
+    list-style-type: none;
+    font-size: 0.6rem;
+    font-weight: 300;
+}
+
+a{
+    text-decoration: none;
+    color: black;
+}
+
+a:hover{
+    color: grey;
+}
+
+.sublinks1{
+    display: none;
+    padding: 2px;
+}
+
+.sublinks1 ul li{
+    padding: 5px;
+}
+
+.list li:hover .sublinks1{
+    display: block;
+    position: absolute;
+    background-color: white;
+    color: black;
+}
+
+.sublinks2{
+    display: none;
+    padding: 2px;
+}
+
+.sublinks2 ul li{
+    padding: 5px;
+}
+
+.list li:hover .sublinks2{
+    display: block;
+    position: absolute;
+    text-align: left;
+    background-color: white;
+    color: black;
+}
+
+.sublinks3{
+    display: none;
+    padding: 2px;
+}
+
+.sublinks3 ul li{
+    padding: 5px;
+}
+
+.list li:hover .sublinks3{
+    display: block;
+    position: absolute;
+    text-align: left;
+    background-color: white;
+    color: black;
+}
+
+.sublinks4{
+    display: none;
+    padding: 2px;
+}
+
+.sublinks4 ul li{
+    padding: 5px;
+}
+
+.list li:hover .sublinks4{
+    display: block;
+    position: absolute;
+    text-align: left;
+    background-color: white;
+    color: black;
+}
+
+.sublinks5{
+    display: none;
+    padding: 2px;
+}
+
+.sublinks5 ul li{
+    padding: 3px;
+}
+
+.list li:hover .sublinks5{
+    display: block;
+    position: absolute;
+    text-align: left;
+    background-color: white;
+    color: black;
+}
