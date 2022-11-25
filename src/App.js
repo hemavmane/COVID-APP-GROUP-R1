@@ -9,7 +9,7 @@ import { VaccineButtons } from "./Component/VaccineButtonsContainer/VaccineButto
 import { Fda } from "./Component/FdaApprrove/Fda";
 import { Phase1 } from "./Component/Phase1/Phase";
 import { News } from "./Component/NewsCovid/News";
-import { HeaderContextApiProvider } from "./Component/HeaderContextApi/HeaderContextApi";
+// import { HeaderContextApiProvider } from "./Component/HeaderContextApi/HeaderContextApi";
 import Header from "./Component/Header/Header";
 import Heading from "./Component/Header/Heading";
 import Cart from "./Component/Header/Cart";
@@ -24,6 +24,7 @@ import "./Component/CovidGraph/CovidGraph.css";
 function App() {
   const { coviddata } = useContext(createContextApi);
   console.log(coviddata);
+console.log(coviddata)
 
   useEffect(() => {
     setTimeout(() => {
@@ -31,6 +32,7 @@ function App() {
     }, 2000);
     coviddata.push(1);
   }, []);
+  },[]);
 
   const dna = () => {
     return (
@@ -64,6 +66,30 @@ function App() {
               <Route path="/countries" element={<Countries />} />
               <Route path="/countries" element={<CovidCasesData />} />
             </Routes>
+        <Header />
+        <Heading />
+        <Cart />
+
+        {coviddata.length > 0 ? (
+          <div className="app_background">
+           
+            {/* <VaccineButtons /> */}
+            {/* <Routes>
+              <Route path="/" element={<VaccineData />} />
+            
+              <Route path="/covidgraph" element={<CovidGraph />} />
+             
+              <Route path="/fda" element={<Fda />} />
+              <Route path="/phase1" element={<Phase1 />} />
+              <Route path="/news" element={<News />} />
+            </Routes> */}
+
+            {/* <HeaderContextApiProvider> */}
+
+            {/* <MyCovidApp /> */}
+
+            {/* </HeaderContextApiProvider> */}
+            {/* </ContextApiProvider1> */}
           </div>
         ) : (
           <div className="dna">{dna()}</div>

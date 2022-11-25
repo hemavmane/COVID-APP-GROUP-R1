@@ -4,6 +4,40 @@ import image from "./logo/Gavi-logo_1b.png";
 import './Header.css';
 
 function Header() {
+
+  const sublink = [
+    [
+      "About",
+      "Operating model",
+      "Governance",
+      "Market Shaping",
+      "Global Health & Development",
+      "Work with us",
+    ],
+    [
+      "How our support works",
+      "Types of support",
+      "Country Hub",
+      "Our Impact",
+      "Programmatic Policies",
+    ],
+    [
+      "Resource mobilisation process",
+      "Funding",
+      "Partnering with business",
+      "Innovative financing",
+      "INFUSE",
+    ],
+    [
+      "About VaccinesWork",
+      "The science behind COVID-19",
+      "Emerging threats",
+      "Tales from the past",
+      "News from the lab",
+      "Stories from the community",
+    ],
+    ["Media room", "Publications", "Document library", "Knowledge Produts"],
+  ];
   return (
     <>
       <nav className="navbar">
@@ -38,6 +72,13 @@ function Header() {
                   <li>
                     <a href="#">Work with us &gt;</a>
                   </li>
+                  {sublink[0].map((item) => {
+                    return (
+                      <li>
+                        <a href="#">{item}</a>
+                      </li>
+                    );
+                  })}
                 </ul>
               </div>
             </li>
@@ -46,21 +87,13 @@ function Header() {
               <a href="#">PROGRAMMERS & IMPACT</a>
               <div className="sublinks2">
                 <ul>
-                  <li>
-                    <a href="#">How our support works &gt;</a>
-                  </li>
-                  <li>
-                    <a href="#">Types of support &gt;</a>
-                  </li>
-                  <li>
-                    <a href="#">Country Hub &gt;</a>
-                  </li>
-                  <li>
-                    <a href="#">Our Impact &gt;</a>
-                  </li>
-                  <li>
-                    <a href="#">Programmatic Policies &gt;</a>
-                  </li>
+                  {sublink[1].map((item) => {
+                    return (
+                      <li>
+                        <a href="#">{item}</a>
+                      </li>
+                    );
+                  })}
                 </ul>
               </div>
             </li>
@@ -69,21 +102,13 @@ function Header() {
               <a href="#">INVESTING IN GAVI</a>
               <div className="sublinks3">
                 <ul>
-                  <li>
-                    <a href="#">Resource mobilisation process &gt;</a>
-                  </li>
-                  <li>
-                    <a href="#">Funding &gt;</a>
-                  </li>
-                  <li>
-                    <a href="#">Partnering with business</a>
-                  </li>
-                  <li>
-                    <a href="#">Innovative financing &gt;</a>
-                  </li>
-                  <li>
-                    <a href="#">INFUSE &gt;</a>
-                  </li>
+                  {sublink[2].map((item) => {
+                    return (
+                      <li>
+                        <a href="#">{item}</a>
+                      </li>
+                    );
+                  })}
                 </ul>
               </div>
             </li>
@@ -92,22 +117,13 @@ function Header() {
               <a href="#">VACCINESWORK</a>
               <div className="sublinks4">
                 <ul>
-                  <li>
-                    <a href="#">About VaccinesWork</a>
-                  </li>
-                  <li>
-                    <a href="#">The science behind COVID-19</a>
-                  </li>
-                  <li>
-                    <a href="#">Emerging threats</a>
-                  </li>
-                  <li>
-                    <a href="#">Tales from the past</a>
-                  </li>
-                  <li>
-                    <a href="#">News from the lab</a>
-                  </li>
-                  <li>Stories from the community</li>
+                  {sublink[3].map((item) => {
+                    return (
+                      <li>
+                        <a href="#">{item}</a>
+                      </li>
+                    );
+                  })}
                 </ul>
               </div>
             </li>
@@ -116,18 +132,13 @@ function Header() {
               <a href="#">NEWS & RESOURCES</a>
               <div className="sublinks5">
                 <ul>
-                  <li>
-                    <a href="#">Media room &gt;</a>
-                  </li>
-                  <li>
-                    <a href="#">Publications</a>
-                  </li>
-                  <li>
-                    <a href="#">Document library &gt;</a>
-                  </li>
-                  <li>
-                    <a href="#">Knowledge Produts</a>
-                  </li>
+                  {sublink[4].map((item) => {
+                    return (
+                      <li>
+                        <a href="#">{item}</a>
+                      </li>
+                    );
+                  })}
                 </ul>
               </div>
             </li>

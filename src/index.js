@@ -9,7 +9,6 @@ import "./index.css";
 import reportWebVitals from "./reportWebVitals";
 
 
-
 import { ContextApiProvider1 } from "./Component/ContextApiProvider1/ContextApiProvider1";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
