@@ -1,10 +1,11 @@
 .heading{
-    width: 90%;
-    height: 50px;
-    background-color: rgb(31, 31, 231);
+    width: 95%;
+    height: 70px;
+    background-color: rgb(86, 86, 240);
     margin: 0 auto;
     text-align: center;
     color: white;
+    padding:5px;
 }
 
 .head{

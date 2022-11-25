@@ -30,14 +30,10 @@ export function News() {
       {newsi.news?.map(({title,news_id,pubDate,link,urlToImage}) => {
         return (
           <div key={news_id} className="news_Container">
-           
-            <div>
               <h1 className="n_tit">{title}</h1>
             <img className="news_img" src={urlToImage} alt="" />
-            <p>{pubDate}</p>
-            <a href={link} className="link_tomore">link</a>
-            </div>
-           
+            <p className="date">{pubDate}</p>
+            <div> <a href={link} className="link_tomore">link</a></div> 
           </div>
         );
       })}

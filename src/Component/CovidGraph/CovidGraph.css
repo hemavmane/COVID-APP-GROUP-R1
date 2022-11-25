@@ -7,14 +7,12 @@
 }
 .heading_graph{
     text-align: center;
-    color: white;
     font-weight: bold;
 }
 
 .Areachart{
     display: flex;
     justify-content: center;
-    
 }
 
 .daily_changes{
