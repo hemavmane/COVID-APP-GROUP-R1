@@ -1,8 +1,8 @@
 import React from 'react'
 import image from "./logo/Gavi-logo_1b.png";
-
+import {News} from '../NewsCovid/News'
 import './Header.css';
-
+import {Link} from 'react-router-dom'
 function Header() {
 
   const sublink = [
@@ -38,6 +38,8 @@ function Header() {
     ],
     ["Media room", "Publications", "Document library", "Knowledge Produts"],
   ];
+
+
   return (
     <>
       <nav className="navbar">
@@ -72,6 +74,7 @@ function Header() {
                   <li>
                     <a href="#">Work with us &gt;</a>
                   </li>
+                  
                   {sublink[0].map((item) => {
                     return (
                       <li>
@@ -129,7 +132,8 @@ function Header() {
             </li>
 
             <li>
-              <a href="#">NEWS & RESOURCES</a>
+              <Link to="/news">NEWS & RESOURCES </Link>
+              
               <div className="sublinks5">
                 <ul>
                   {sublink[4].map((item) => {

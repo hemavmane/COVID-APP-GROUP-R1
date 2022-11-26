@@ -11,6 +11,8 @@ import {
   LabelList,
 } from "recharts";
 
+import '../Covid/CovidData.css'
+
 const CustomizedLabel = ({ x, y, stroke, value }) => {
   return (
     <text x={x} y={y} dy={-4} fill={stroke} fontSize={10} textAnchor="middle">
@@ -56,10 +58,10 @@ export function CovidCasesData() {
 
   return (
     <>
-      <div className="main_chart_container">
+      <div className="main_chart_container ">
         <LineChart
-          width={750}
-          height={330}
+          width={850}
+          height={530}
           data={obj}
           margin={{
             top: 20,
@@ -67,7 +69,7 @@ export function CovidCasesData() {
           }}>
           <CartesianGrid strokeDasharray="3 3" />
           <XAxis dataKey="country" height={60} tick={<CustomizedAxisTick />} />
-          <YAxis />
+          <YAxis  width={100}/>
           <Tooltip />
           <Legend />
           <Line type="monotone" dataKey="activePerOneMillion" stroke="#0000FF">

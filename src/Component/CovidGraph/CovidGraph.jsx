@@ -40,7 +40,7 @@ export function CovidGraph() {
       <div className="Areachart">
         {iscurrent ? (
           <div className="Areachart_1">
-      <h1 className="heading_graph">ACTIVE CASES & TOTAL CASES</h1>
+      <h1 className="heading_graph">ACTIVE CASES & TOTAL TESTS</h1>
             <AreaChart
               width={1000}
               height={530}

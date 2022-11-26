@@ -26,6 +26,7 @@ export const Countries = () => {
 
   return (
     <>
+      <h1 className="country_data_info">COUNTRY WISE COVID DATA</h1>
       <div className="graph_container1">
         <div>
           <AreaChart

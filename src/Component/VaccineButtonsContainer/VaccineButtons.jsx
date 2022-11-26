@@ -1,7 +1,6 @@
 
 import React from "react"
 import {Link} from "react-router-dom"
-
 import  '../VaccineButtonsContainer/VaccineButtons.css'
 
 export function VaccineButtons(){
@@ -10,30 +9,33 @@ export function VaccineButtons(){
     return(
         <>
         <div className="vaccine_sidebar">
-        <h1 className="h1_vaccine"> Categories</h1>
+        
         <div>
-           <Link to="/" ><button  className="button_b">All Vaccine</button></Link> 
+           <Link to="/" ><h2  className="button_b">Gavi</h2></Link> 
+           </div>
+        <div>
+           <Link to="/vaccinedata" ><h2  className="button_b">All Vaccine</h2></Link> 
            </div>
           <div>
-           <Link to="/covidgraph"><button  className="button_b">Covid Dashboard</button></Link> 
+           <Link to="/covidgraph"><h2  className="button_b">Covid Dashboard</h2></Link> 
            </div>
            
            <div>
-           <Link to="/fda"><button  className="button_b">FDA Apprrove</button></Link>
+           <Link to="/fda"><h2  className="button_b">FDA Apprrove</h2></Link>
            </div>
            <div>
-           <Link to="/phase1"><button  className="button_b">Phase I</button></Link>
+           <Link to="/phase1"><h2  className="button_b">Phase I</h2></Link>
            </div>
            <div>
-           <Link to="/news"><button  className="button_b">News</button></Link>
+           <Link to="/news"><h2  className="button_b">News</h2></Link>
            </div>
            <div>
-           <Link to="/countries"><button  className="button_b">Countries</button></Link>
+           <Link to="/countries"><h2  className="button_b">Countries</h2></Link>
            </div>
            <div>
-           <Link to="/covidCasesData"><button  className="button_b">CovidCases</button></Link>        
+           <Link to="/covidcasesdata"><h2  className="button_b">CovidCases</h2></Link>        
           </div> 
-          
+         
         
         </div>
         </>

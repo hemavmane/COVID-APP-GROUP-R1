@@ -12,31 +12,18 @@
     grid-template-columns: 1fr 1fr 1fr;
 }
 
-.first,.fourth{
-    width: 95%;
-    height: auto;
-    background-color: #34574C;
-    color: rgb(18, 230, 18);
-    text-align: center;
-    margin-top: 10px;
-}
 
-.second,.five{
-    width: 95%;
-    height: auto;
-    background-color: #34573A;
-    color: yellow;
-    text-align: center;
-    margin-top: 10px;
-}
 
-.third,.six{
-    width: 95%;
-    height: auto;
-    background-color: #383632;
-    color: rgb(245, 7, 7);
+.third,.second, .first{
+    width:400px;
+    height:30vh;
+    background-color:#fff;
+    color: #0081CF;
     text-align: center;
-    margin-top: 10px;
+    margin:25px ;
+    padding: 10px;
+    font-size: 35px;
+   box-shadow:5px 5px 5px gray ;
 }
 
 .btn{
