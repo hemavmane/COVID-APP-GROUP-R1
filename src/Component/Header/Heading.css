@@ -1,13 +1,18 @@
 .heading{
-    width: 90%;
+    width: 95%;
     height: 50px;
-    background-color: rgb(31, 31, 231);
+    background-color: #0070BA;
     margin: 0 auto;
     text-align: center;
-    color: white;
+    color: #fff;
 }
 
 .head{
     font-weight: 200;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+h1{
+    padding: 6px;
+    margin-top: 5px;
 }
