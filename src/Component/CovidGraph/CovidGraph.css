@@ -1,32 +1,24 @@
 
 .graph_container{
-        position: absolute;
-        top: 25%;
-        right:15%;
-        background-color:#fff ;
-        box-shadow:5px 5px 5px gray ;
+    width: 80%;
+    position: absolute;
+    top: 2%;
+    right: 0%;
 }
 .heading_graph{
     text-align: center;
+    color: white;
     font-weight: bold;
 }
 
 .Areachart{
     display: flex;
     justify-content: center;
+    
 }
 
 .daily_changes{
-    position: absolute;
-    right: 0%;
-    top: 0%;
-    /* padding: 3%; */
+    position: relative;
+    left: 0%;
+    padding: 3%;
 }
-
-
-
-
-
-
-
-
