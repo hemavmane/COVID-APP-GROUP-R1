@@ -1,12 +1,14 @@
 .vaccine_sidebar{
-    width: 15%;
-    border: 1px solid black;
-    height: 80vh;
-    overflow-y: scroll;
-    background-color:#01161e ;
+  width: 15%;
+  border: 1px solid black;
+  height: 80vh;
+  background-color:#01161e ;
+  position: absolute;
+  top: 80%;
+ overflow: hidden;
 }
 .h1_vaccine{
-    color: white
+  color: white
 }
 .vaccine_sidebar div{
 margin: 2%;
@@ -14,32 +16,33 @@ margin: 2%;
 
 
 .button_b{
-  
-    width: 98%;
-    background-color:#003049;
-    border: none;
-    padding: 6%;
-    box-shadow: 10px;
-    color: white;
-    font-size: large;
-    font-weight:normal;
-    border-radius: 3%;
-    cursor: pointer;
+
+  width: 98%;
+  background-color:#003049;
+  border: none;
+  padding: 10%;
+  box-shadow: 10px;
+  color: white;
+  font-size: large;
+  font-weight:normal;
+  border-radius: 3%;
+  cursor: pointer;
+ 
 }
 
 
 .button_b:hover{
-    background-color:#3969eb;
+  background-color:#3969eb;
 }
 
 @media screen and (min-width: 10%) {
-    div.button_b {
-      font-size: 80px;
-    }
+  div.button_b {
+    font-size: 80px;
   }
-  
-  @media screen and (max-width: 600px) {
-    div.button_b {
-      font-size: 30px;
-    }
+}
+
+@media screen and (max-width: 600px) {
+  div.button_b {
+    font-size: 30px;
+  }
 }

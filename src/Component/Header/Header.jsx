@@ -1,10 +1,10 @@
-import React from 'react'
-import image from "./logo/Gavi-logo_1b.png";
-import Registration from '../Registration/Registration'
-
+import React, { useState } from 'react'
 import './Header.css';
+import Registration from '/Users/admin/CovidAppProject/COVID-APP-GROUP-R1/src/Component/Registration/Registration.jsx'
+import image from "./logo/Gavi-logo_1b.png";
 
 function Header() {
+  const [isToggle, setisToggle]=useState(false)
 
   const sublink = [
     [
@@ -107,7 +107,7 @@ function Header() {
               </div>
             </li>
 
-            <li> 
+            <li>
               <a href="#">NEWS & RESOURCES</a>
               <div className="sublinks5">
                 <ul>
@@ -121,13 +121,21 @@ function Header() {
                 </ul>
               </div>
             </li>
-            <Registration/>
+            <li>
+              <div>
+              <a onClick={()=>setisToggle(!isToggle)}>
+                Register
+              </a>
+              {isToggle && <Registration/>}
+              </div>
+            </li>
           </ul>
           <span></span>
         </div>
       </nav>
     </>
-  );
+  )
 }
+
 
 export default Header

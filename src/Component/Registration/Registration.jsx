@@ -22,7 +22,7 @@ function App() {
     useEffect(() => {
         if (Object.keys(formErrors).length === 0 && isSubmit) {
         }
-    },[formErrors]);
+    }, [formErrors]);
     const validate = (values) => {
         const errors = {};
         const regex = /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/i;
@@ -45,60 +45,62 @@ function App() {
     };
 
     return (
-        <div className="Login-container">
-            <form onSubmit={handleSubmit}>
-                <h1>Registration Form</h1>
-                <div className="ui divider"></div>
-                <div className="ui form">
-                    <div className="field">
-                        <label>Name</label>
-                        <input
-                            type="text"
-                            name="username"
-                            placeholder="Username"
-                            value={formValues.username}
-                            onChange={handleChange}
-                        />
+        <div className="myRegistration">
+            <div className="Login-container">
+                <form onSubmit={handleSubmit}>
+                    <h1>Registration Form</h1>
+                    <div className="ui divider"></div>
+                    <div className="ui form">
+                        <div className="field">
+                            <label>Name</label>
+                            <input
+                                type="text"
+                                name="username"
+                                placeholder="Username"
+                                value={formValues.username}
+                                onChange={handleChange}
+                            />
+                        </div>
+                        <p>{formErrors.username}</p>
+                        <div className="field">
+                            <label>Email</label>
+                            <input
+                                type="text"
+                                name="email"
+                                placeholder="Email"
+                                value={formValues.email}
+                                onChange={handleChange}
+                            />
+                        </div>
+                        <p>{formErrors.email}</p>
+                        <div className="field">
+                            <label>Password</label>
+                            <input
+                                type="password"
+                                name="password"
+                                placeholder="Password"
+                                value={formValues.password}
+                                onChange={handleChange}
+                            />
+                        </div>
+                        <p>{formErrors.password}</p>
+                        <button id="submitbtn" className="fluid ui button blue">Submit</button>
                     </div>
-                    <p>{formErrors.username}</p>
-                    <div className="field">
-                        <label>Email</label>
-                        <input
-                            type="text"
-                            name="email"
-                            placeholder="Email"
-                            value={formValues.email}
-                            onChange={handleChange}
-                        />
-                    </div>
-                    <p>{formErrors.email}</p>
-                    <div className="field">
-                        <label>Password</label>
-                        <input
-                            type="password"
-                            name="password"
-                            placeholder="Password"
-                            value={formValues.password}
-                            onChange={handleChange}
-                        />
-                    </div>
-                    <p>{formErrors.password}</p>
-                    <button id="submitbtn" className="fluid ui button blue">Submit</button>
-                </div>
-            </form>
-            {Object.keys(formErrors).length === 0 && isSubmit ? (
-                <>
-                    <div id="message" className="ui message success">Registered successfully!</div>
-                    <div className="displayBox">
-                        <h3 id="msgUsername">Name: {formValues.username}</h3>
-                        <h3 id="msgEmail"> email: {formValues.email}</h3>
-                    </div>
-                </>
-            ) : (
-                <pre>{JSON.stringify(formValues, undefined, 2)}</pre>
-            )}
+                </form>
+                {Object.keys(formErrors).length === 0 && isSubmit ? (
+                    <>
+                        <div id="message" className="ui message success">Registered successfully!</div>
+                        <div className="displayBox">
+                            <h3 id="msgUsername">Name: {formValues.username}</h3>
+                            <h3 id="msgEmail"> email: {formValues.email}</h3>
+                        </div>
+                    </>
+                ) : (
+                    <pre>{JSON.stringify()}</pre>
+                )}
 
 
+            </div>
         </div>
     );
 }
