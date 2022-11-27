@@ -1,6 +1,4 @@
 import { useContext, useState } from "react";
-import { createContextApi } from "../ContextApiProvider1/ContextApiProvider1";
-
 import { ToastContainer, toast } from "react-toastify";
 import Button from "@mui/material/Button";
 import {
@@ -15,6 +13,7 @@ import {
   
 } from "recharts";
 
+import { createContextApi } from "../ContextApiProvider1/ContextApiProvider1";
 import "../CovidGraph/CovidGraph.css";
 import "react-toastify/dist/ReactToastify.css";
 
@@ -48,7 +47,7 @@ export function CovidGraph() {
               margin={{ top: 10, right: 30, left: 0, bottom: 0 }}>
               <XAxis dataKey="Country"  />
               <YAxis width={90} allowDataOverflow="true" dataKey="Population" />
-              <CartesianGrid />
+              <CartesianGrid strokeDasharray="3 3" />
               <Tooltip />
               <Legend />
               <Area
@@ -78,7 +77,7 @@ export function CovidGraph() {
               margin={{ top: 10, right: 30, left: 0, bottom: 0 }}>
               <XAxis allowDataOverflow="true" dataKey="Country" />
               <YAxis width={90} allowDataOverflow="true" dataKey="Population" />
-              <CartesianGrid />
+              <CartesianGrid strokeDasharray="3 3" />
               <Tooltip />
               <Legend />
               <Area

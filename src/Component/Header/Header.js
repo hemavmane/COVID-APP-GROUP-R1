@@ -1,9 +1,10 @@
-import React from 'react'
+import {React,useState} from 'react'
 import image from "./logo/Gavi-logo_1b.png";
 import {News} from '../NewsCovid/News'
 import './Header.css';
 import {Link} from 'react-router-dom'
 function Header() {
+const [seachdata,setSeachData] = useState("")
 
   const sublink = [
     [
@@ -42,6 +43,7 @@ function Header() {
 
   return (
     <>
+    
       <nav className="navbar">
         <div className="left">
           <img src={image} alt="logo" />
@@ -147,9 +149,14 @@ function Header() {
               </div>
             </li>
           </ul>
-          <span></span>
+         
         </div>
       </nav>
+     <input type="text" className='input_search_covid' placeholder='seach here ' value={seachdata}
+       onChange={(e)=>setSeachData(e.target.value)}/>
+
+     
+    
     </>
   );
 }

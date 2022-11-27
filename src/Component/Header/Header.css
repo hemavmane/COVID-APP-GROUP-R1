@@ -6,6 +6,14 @@
     justify-content: space-between;
 }
 
+.input_search_covid{
+margin-left: 80%;
+width: 15%;
+height: 5vh;
+border-radius:20px;
+border:1px solid goldenrod ;
+}
+
 .left{
     width: 20%;
     padding: 2px;

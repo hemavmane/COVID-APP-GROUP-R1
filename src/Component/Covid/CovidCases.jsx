@@ -58,6 +58,7 @@ export function CovidCasesData() {
 
   return (
     <>
+    <h1 className=".heading_count">All COUNTRIES DATA</h1>
       <div className="main_chart_container ">
         <LineChart
           width={850}

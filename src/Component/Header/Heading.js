@@ -5,9 +5,10 @@ import './Heading.css'
 function Heading() {
   return (
     <div>
+      
       <div className='heading'>
         
-        <h1 className='Head'>COVID-19 dashboard</h1>
+        <h1 className='head'>COVID-19 dashboard</h1>
       </div>
     </div>
   )

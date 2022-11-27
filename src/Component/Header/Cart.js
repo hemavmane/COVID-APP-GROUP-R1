@@ -6,6 +6,7 @@ import "./cart.css";
 
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+import {Button} from '@mui/material'
 
 function Cart() {
  const { headerData, error, headerToast } = useContext(createHeadarContextApi);
@@ -15,8 +16,9 @@ function Cart() {
         <p>Data source: Gavi/World Health Organization.</p>
       </div>
       <div className="btn">
-        <button className="btn1">DashBoard</button>
-        <button className="btn2">GLOBAL</button>
+        <span className="btn1"> <Button variant="contained" >DashBoard</Button></span>
+       <span className="btn2"><Button variant="outlined" >GLOBAL</Button></span>
+        
       </div>
       {headerData.map(
         ({
@@ -33,22 +35,28 @@ function Cart() {
               <div className="container">
                 <div className="first">
                   <span>
-                    <p>Total Cases: {ActiveCases}</p>
-                    <p>Active Cases: {TotalCases}</p>
+                    <p className='cap'>Total Cases</p>
+                    <span className='active_ca small_T' >{ActiveCases}</span>
+                    <p className='cap'>Active Cases</p>
+                    <span className='t_ca  small_R'>{TotalCases}</span>
                   </span>
                 </div>
 
                 <div className="second">
                   <span>
-                  <p>Total Deaths: {TotalDeaths}</p>
-                  <p>New Deaths: {NewDeaths}</p>
+                  <p className='cap'>Total Deaths </p>
+                  <span className='T_D small_T'>{TotalDeaths}</span>
+                  <p className='cap'>New Deaths </p>
+                  <span className='N_D  small_R'>{NewDeaths}</span>
                   </span>
                 </div>
 
                 <div className="third">
                   <span>
-                  <p>New Cases: {NewCases}</p>
-                  <p>CRITICAL: {Serious_Critical}</p>
+                  <p className='cap'>New Cases </p>
+                  <span className='N_D small_T '>{Serious_Critical}</span>
+                  <p className='cap'>CRITICAL</p>
+                  <span className='N_D small_R'>{NewCases}</span>
                   </span>
                 </div>
 
