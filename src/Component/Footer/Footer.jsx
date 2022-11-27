@@ -64,17 +64,6 @@ export function Footer() {
 
 
 
-
-
-
-
-
-
-
-
-
-
-
       <div className="box3">
         <div className="first">
           <img src={image5} alt="logo" />

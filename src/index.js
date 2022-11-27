@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import reportWebVitals from './reportWebVitals';
@@ -8,13 +8,12 @@ import {ContextApi} from './Component/ContextApi/ContextApi'
 import {Footer} from "./Component/Footer/Footer"
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
-  <React.StrictMode>
+  // <React.StrictMode>
     <ContextApi>
       {/* <CovidGraph/> */}
       {/* <CovidHotSpots/> */}
        <Footer/> 
     </ContextApi>
-=======
 import * as React from "react";
 import ReactDOM from "react-dom/client";
 import {BrowserRouter} from "react-router-dom"
