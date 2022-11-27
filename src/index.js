@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import reportWebVitals from './reportWebVitals';
@@ -13,10 +14,26 @@ root.render(
       {/* <CovidHotSpots/> */}
        <Footer/> 
     </ContextApi>
+=======
+import * as React from "react";
+import ReactDOM from "react-dom/client";
+import {BrowserRouter} from "react-router-dom"
+import App from "./App";
+import { ContextApiProvider1 } from "./Component/ContextApiProvider1/ContextApiProvider1";
+
+import reportWebVitals from "./reportWebVitals";
+const root = ReactDOM.createRoot(document.getElementById("root"));
+
+root.render(
+  <React.StrictMode>
+    <BrowserRouter>
+     <ContextApiProvider1> 
+      <App />
+    </ContextApiProvider1>
+ </BrowserRouter>
+>>>>>>> ed774de42c9de6798c8c2c25a74e629e5e967746
   </React.StrictMode>
 );
 
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
+
 reportWebVitals();
