@@ -1,6 +1,4 @@
 import { useContext, useState } from "react";
-import { createContextApi } from "../ContextApiProvider1/ContextApiProvider1";
-
 import { ToastContainer, toast } from "react-toastify";
 import Button from "@mui/material/Button";
 import {
@@ -11,8 +9,11 @@ import {
   Tooltip,
   Area,
   Legend,
+ 
+  
 } from "recharts";
 
+import { createContextApi } from "../ContextApiProvider1/ContextApiProvider1";
 import "../CovidGraph/CovidGraph.css";
 import "react-toastify/dist/ReactToastify.css";
 
@@ -26,58 +27,63 @@ export function CovidGraph() {
   return (
     <>
     <div className="graph_container">
-      <h1 className="heading_graph">COVID CASES & DEATHS</h1>
+      
+      <div className="daily_changes">
       <Button
-        className="daily_changes"
+        
         variant="contained"
         onClick={handleCurrentData}>
         Daily Changes
       </Button>
+      </div>
       <div className="Areachart">
         {iscurrent ? (
           <div className="Areachart_1">
+      <h1 className="heading_graph">ACTIVE CASES & TOTAL TESTS</h1>
             <AreaChart
               width={1000}
-              height={560}
+              height={530}
               data={coviddata}
               margin={{ top: 10, right: 30, left: 0, bottom: 0 }}>
-              <XAxis dataKey="Country" />
+              <XAxis dataKey="Country"  />
               <YAxis width={90} allowDataOverflow="true" dataKey="Population" />
-              <CartesianGrid />
+              <CartesianGrid strokeDasharray="3 3" />
               <Tooltip />
               <Legend />
               <Area
                 type="monotone"
                 dataKey="ActiveCases"
-                stroke="#8884d8"
+                stroke="#22577a"
                 fillOpacity={0.8}
-                fill="#e1e5f2"
+                fill="#03045e"
               />
+             
               <Area
                 type="monotone"
                 dataKey="TotalTests"
-                stroke="#82ca9d"
+                stroke="#219ebc"
                 fillOpacity={0.3}
-                fill="#bfdbf7"
+                fill="#219ebc"
               />
             </AreaChart>
           </div>
         ) : (
           <div className="Areachart_2">
+            <h1 className="heading_graph">TOTAL CASES & TOTAL DEATHS</h1>
             <AreaChart
               width={1000}
-              height={560}
+              height={530}
               data={coviddata}
               margin={{ top: 10, right: 30, left: 0, bottom: 0 }}>
               <XAxis allowDataOverflow="true" dataKey="Country" />
               <YAxis width={90} allowDataOverflow="true" dataKey="Population" />
-              <CartesianGrid />
+              <CartesianGrid strokeDasharray="3 3" />
               <Tooltip />
               <Legend />
               <Area
                 type="monotone"
                 dataKey="TotalCases"
-                stroke="#8884d8"
+                stroke="#03045e"
                 fillOpacity={0.6}
                 fill="#1f7a8c"
               />
@@ -86,7 +92,7 @@ export function CovidGraph() {
                 dataKey="TotalDeaths"
                 stroke="#82ca9d"
                 fillOpacity={0.6}
-                fill="#bfdbf7"
+                fill="#03045e"
               />
             </AreaChart>
           </div>

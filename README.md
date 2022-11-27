@@ -1,3 +1,47 @@
+Covid Api
+
+Registration Form:-
+
+Boostrap
+Hooks
+
+Table:-
+Pagination,Hooks
+
+
+Dashboard:-
+
+material ui :-
+Used Button
+
+Spinner-loader
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
