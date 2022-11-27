@@ -1,10 +1,8 @@
-
 .graph_container{
-        position: absolute;
-        top:30%;
-        right:15%;
-        background-color:#fff ;
-        box-shadow:5px 5px 5px gray ;
+    width: 80%;
+    position: absolute;
+    top: 75%;
+    right: 0%;
 }
 .heading_graph{
     text-align: center;
@@ -20,34 +18,5 @@
     position: absolute;
     right: 0%;
     top: 0%;
-   
+    /* padding: 3%; */
 }
-
-
-@media screen and (max-width:375px){
-      
-.graph_container{
-    position: absolute;
-    top:30%;
-    left: 140%;
-    background-color:#fff ;
-    box-shadow:5px 5px 5px gray ;
-}
-.Areachart{
-    display: flex;
-    justify-content: center;
-    margin-top: 40px;
-    width: 50%;
-}
-.daily_changes{
-    position: absolute;
-    right: 0%;
-    top:0%;
-    width:120px;
-}
-}
-
-
-
-
-
