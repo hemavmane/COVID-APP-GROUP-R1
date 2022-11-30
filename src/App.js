@@ -53,24 +53,14 @@ function App() {
             <VaccineButtons />
             <Routes>
               <Route path="/" element={<VaccineData />} />
-
               <Route path="/covidgraph" element={<CovidGraph />} />
-
-              <Route path="/fda" element={<Fda />
-              } />
+              <Route path="/fda" element={<Fda />} />
               <Route path="/phase1" element={<Phase1 />} />
               <Route path="/news" element={<News />} />
             </Routes>
             <DataTable />
 
-            <VaccineButtons />
-            <Routes>
-              <Route path="/" element={<VaccineData />} />
-              <Route path="/covidgraph" element={ <CovidGraph />} />
-              <Route path="/fda" element={<Fda />} />
-              <Route path="/phase1" element={<Phase1 />} />
-              <Route path="/news" element={<News/>} />
-            </Routes>
+            
            
           </div>
         ) : (
