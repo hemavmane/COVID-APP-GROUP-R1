@@ -14,6 +14,7 @@ import DataTable from './Component/DataTable/DataTable'
 
 import "./App.css";
 import "./Component/VaccineData/Vaccine.css";
+import { Cart } from "./Component/HeaderC/HeaderC/Cart/Cart";
 
 
 function App() {
@@ -49,14 +50,17 @@ function App() {
       <div>
         {coviddata.length > 0 ? (
           <div className="app_background">
-
+           
             <VaccineButtons />
             <Routes>
-              <Route path="/" element={<VaccineData />} />
+              
+            <Route path="/" element={<Cart/>} />
+              <Route path="/vaccinedata" element={<VaccineData />} />
               <Route path="/covidgraph" element={<CovidGraph />} />
               <Route path="/fda" element={<Fda />} />
               <Route path="/phase1" element={<Phase1 />} />
               <Route path="/news" element={<News />} />
+              
             </Routes>
             <DataTable />
 

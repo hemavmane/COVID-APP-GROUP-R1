@@ -1,10 +1,10 @@
-import {React,useState} from 'react'
-import image from "./logo/Gavi-logo_1b.png";
-import {News} from '../NewsCovid/News'
+import React, { useState } from 'react'
 import './Header.css';
-import {Link} from 'react-router-dom'
+import Registration from '/Users/admin/CovidAppProject/COVID-APP-GROUP-R1/src/Component/Registration/Registration.jsx'
+import image from "./logo/Gavi-logo_1b.png";
+
 function Header() {
-const [seachdata,setSeachData] = useState("")
+  const [isToggle, setisToggle]=useState(false)
 
   const sublink = [
     [
@@ -39,11 +39,8 @@ const [seachdata,setSeachData] = useState("")
     ],
     ["Media room", "Publications", "Document library", "Knowledge Produts"],
   ];
-
-
   return (
     <>
-    
       <nav className="navbar">
         <div className="left">
           <img src={image} alt="logo" />
@@ -54,29 +51,6 @@ const [seachdata,setSeachData] = useState("")
               <a href="#">OUR ALLIANCE</a>
               <div className="sublinks1">
                 <ul>
-                  <li>
-                    <a href="#">About</a>
-                  </li>
-                  <li>
-                    <a href="#">
-                      Strategy &gt;</a>
-                  </li>
-                  <li>
-                    <a href="#">Operating model &gt;</a>
-                  </li>
-                  <li>
-                    <a href="#">Governance &gt;</a>
-                  </li>
-                  <li>
-                    <a href="#">Market Shaping</a>
-                  </li>
-                  <li>
-                    <a href="#">Global Health & Development &gt;</a>
-                  </li>
-                  <li>
-                    <a href="#">Work with us &gt;</a>
-                  </li>
-                  
                   {sublink[0].map((item) => {
                     return (
                       <li>
@@ -134,8 +108,7 @@ const [seachdata,setSeachData] = useState("")
             </li>
 
             <li>
-              <Link to="/news">NEWS & RESOURCES </Link>
-              
+              <a href="#">NEWS & RESOURCES</a>
               <div className="sublinks5">
                 <ul>
                   {sublink[4].map((item) => {
@@ -148,17 +121,21 @@ const [seachdata,setSeachData] = useState("")
                 </ul>
               </div>
             </li>
+            <li>
+              <div>
+              <a onClick={()=>setisToggle(!isToggle)}>
+                Register
+              </a>
+              {isToggle && <Registration/>}
+              </div>
+            </li>
           </ul>
-         
+          <span></span>
         </div>
       </nav>
-     <input type="text" className='input_search_covid' placeholder='seach here ' value={seachdata}
-       onChange={(e)=>setSeachData(e.target.value)}/>
-
-     
-    
     </>
-  );
+  )
 }
+
 
 export default Header
