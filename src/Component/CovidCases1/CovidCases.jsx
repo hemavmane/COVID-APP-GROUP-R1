@@ -11,7 +11,7 @@ import {
   LabelList,
 } from "recharts";
 
-import '../Covid/CovidCases.css'
+import '../CovidCases1/CovidCases'
 
 const CustomizedLabel = ({ x, y, stroke, value }) => {
   return (
@@ -37,7 +37,7 @@ const CustomizedAxisTick = ({ x, y, payload }) => {
   );
 };
 
-export function CovidCasesData() {
+export function CovidCases(){
   const [obj, setObj] = useState([
     {
       country: "",

@@ -1,12 +1,13 @@
 import React, { useContext } from 'react'
-import Heading from '../Header/Heading'
-import { createHeadarContextApi } from "../HeaderContextApi/HeaderContextApi";
+import Heading from '../Heading/Heading'
+import { createHeadarContextApi } from "../HeaderContext/HeaderContext";
 
-import "./cart.css";
+import "../Cart/Cart.css";
 
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import {Button} from '@mui/material'
+import DataTable from '../../DataTable/DataTable';
 
 function Cart() {
  const { headerData, error, headerToast } = useContext(createHeadarContextApi);
@@ -32,7 +33,7 @@ function Cart() {
           return (
             <div>
               <Heading/>
-              <div className="container">
+              <div className="container_cart">
                 <div className="first">
                   <span>
                     <p className='cap'>Total Cases</p>
@@ -82,6 +83,7 @@ function Cart() {
           );
         }
       )}
+      <DataTable/>
       {headerToast && toast(error) && <ToastContainer theme='dark'/>}
     </>
   );

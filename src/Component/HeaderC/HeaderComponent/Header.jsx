@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import './Header.css';
+import '../HeaderComponent/Header.css';
 import Registration from '/Users/admin/CovidAppProject/COVID-APP-GROUP-R1/src/Component/Registration/Registration.jsx'
 import image from "./logo/Gavi-logo_1b.png";
 

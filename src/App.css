@@ -3,11 +3,19 @@
 } */
 
 .dna{
+
   text-align: center;
   margin-top: 20%;
- background-color: black;
 }
 
 
 
 
+@media screen and (max-width:375px) {
+  .dna{
+
+    text-align: center;
+    margin-top: 60%;
+  }
+  
+  }

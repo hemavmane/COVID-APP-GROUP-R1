@@ -1,15 +1,13 @@
-body{
+/* body{
   position: relative;
-}
+} */
 .myRegistration{
   margin-top: 5rem;
   position: absolute;
   height: 70%;
   width: 70%;
-  background-color:#003049;
-  border: 5px solid black;
   right: 13%;
-  z-index: 5;
+  /* z-index: 5; */
 }
 .Login-container { 
     display: flex !important;
@@ -41,7 +39,7 @@ body{
     padding: 0.5rem;
     border-radius: 5px;
   }
-  p {
+  .f {
       font-size: medium;
     color: red;
   }

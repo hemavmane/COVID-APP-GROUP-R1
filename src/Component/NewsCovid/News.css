@@ -1,19 +1,43 @@
-.news_img{
-    width:60%;
-    height: 50%;
-    margin-left: 30%;
+.news_img {
+  width:40vw;
+  height:60vh;
 }
 
-.all_news{
-    display: flex;
-    align-items: center;
-    align-content: center;
-    flex-direction: column;
-    color: white;
-    position: absolute;
-    top: 2%;
-    right: 0%;
-    height: 60vh;
-    width: 50%;
-    overflow-y: scroll;
+.all_news {
+  display: flex;
+  align-items: center;
+  align-content: center;
+  flex-direction: column;
+  position: absolute;
+  top: 15%;
+  right: 0%;
+  width: 98%;
+  box-shadow: 5px 6px 7px gainsboro;
+  /* background-color: azure; */
+}
+.link{
+    color: blue;
+}
+.title{
+    width:40vw ;
+    padding:2% ;
+}
+
+.n_container{
+    width:50vw ;
+    background-color:#edede9;
+    margin: 2%;
+    box-shadow: 5px 5px 7px;
+}
+
+@media screen and  (max-width:375px){
+  .news_img {
+    width:40vw;
+    height:20vh;
   }
+}
+
+
+
+
+

@@ -2,7 +2,7 @@ import { useState, useEffect } from "react";
 
 import '../Registration/Registration.css'
 
-function App() {
+function Registration() {
     const initialValues = { username: "", email: "", password: "" };
     const [formValues, setFormValues] = useState(initialValues);
     const [formErrors, setFormErrors] = useState({});
@@ -61,7 +61,7 @@ function App() {
                                 onChange={handleChange}
                             />
                         </div>
-                        <p>{formErrors.username}</p>
+                        <p className="f">{formErrors.username}</p>
                         <div className="field">
                             <label>Email</label>
                             <input
@@ -72,7 +72,7 @@ function App() {
                                 onChange={handleChange}
                             />
                         </div>
-                        <p>{formErrors.email}</p>
+                        <p className="f">{formErrors.email}</p>
                         <div className="field">
                             <label>Password</label>
                             <input
@@ -83,7 +83,7 @@ function App() {
                                 onChange={handleChange}
                             />
                         </div>
-                        <p>{formErrors.password}</p>
+                        <p className="f">{formErrors.password}</p>
                         <button id="submitbtn" className="fluid ui button blue">Submit</button>
                     </div>
                 </form>
@@ -105,4 +105,4 @@ function App() {
     );
 }
 
-export default App;
+export default Registration;

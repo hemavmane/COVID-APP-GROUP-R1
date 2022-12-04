@@ -22,7 +22,7 @@ export function VaccineButtons(){
              <Link to="/vaccinedata" ><h2  className="button_b">All Vaccine</h2></Link> 
              </div>
             <div>
-             <Link to="/covidgraph"><h2  className="button_b">Covid Dashboard</h2></Link> 
+             <Link to="/covidgraph"><h2  className="button_b">Dashboard</h2></Link> 
              </div>
              
              <div>
@@ -38,9 +38,11 @@ export function VaccineButtons(){
              <Link to="/countries"><h2  className="button_b">Countries</h2></Link>
              </div>
              <div>
-             <Link to="/covidcasesdata"><h2  className="button_b">CovidCases</h2></Link>        
+             <Link to="/covidcases"><h2  className="button_b">CovidCases</h2></Link>        
             </div> 
-           
+            <div>
+             <Link to="/registration"><h2  className="button_b">Register</h2></Link>        
+            </div> 
           
           </div> :
           null

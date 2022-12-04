@@ -109,7 +109,7 @@ function DataTable() {
                 {/* <Pagination postsPerPage={postsPerPage} totalPosts={dataTab.length} paginate={Paginate} /> */}
                 <div className="dataCont">
                     <ul className="Pagenumbers">
-                        <li>
+                        <li className='li_li'>
                             {/* <button className="btn" onClick={handlePrevBtn} disabled={currentPage == pages[0] ? true : false}>Prev</button> */}
                             <button className="btn" onClick={handlePrevBtn} disabled={enable}>Prev</button>
                         </li>
@@ -117,7 +117,7 @@ function DataTable() {
                         {renderPageNumbers}
                         {pageIncrementBtn}
 
-                        <li>
+                        <li className='li_li'>
                             {/* <button className="btn" onClick={handleNextBtn} disabled={currentPage == pages[pages.length - 1] ? true : false}>Next</button> */}
                             <button className="btn" onClick={handleNextBtn} disabled={secEnable}>Next</button>
                         </li>

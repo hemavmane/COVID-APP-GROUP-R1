@@ -13,7 +13,7 @@ useEffect(()=>{
         'X-RapidAPI-Host': 'vaccovid-coronavirus-vaccine-and-treatment-tracker.p.rapidapi.com'
       }
      }).then(res=>{
-          
+         
           setNews({...res.data})
      })
 },[])
@@ -24,11 +24,13 @@ useEffect(()=>{
     <div className='all_news'>
     
            {
-            newsi.news?.map((news_Data)=>{
+            newsi.news?.map(({news_id,title,urlToImage,pubDate,link})=>{
               return(
-                <div key={news_Data.news_id}>
-                  <p>{news_Data.pubDate}</p>
-                  <img className='news_img' src={news_Data.urlToImage} alt="" />
+                <div className='n_container' key={news_id}>
+                  <p className='title'>{title}</p>
+                  <img className='news_img' src={urlToImage} alt="" />
+                  <p>{pubDate}</p>
+                  <a href="link" className='link'>Link</a>
                 </div>
               )
             })
