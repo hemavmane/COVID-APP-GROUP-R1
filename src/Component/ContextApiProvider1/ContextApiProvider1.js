@@ -2,7 +2,6 @@ import React, { useState, useEffect, createContext } from "react";
 
 import axios from "axios";
 
-//  Providing Api data
 const createContextApi = createContext();
 
 function ContextApiProvider1({ children }) {
